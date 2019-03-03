@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1551638452 source:/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/main.cpp
+	<iostream>
+	<thread>
+
