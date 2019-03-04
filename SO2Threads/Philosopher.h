@@ -11,6 +11,9 @@
 class Philosopher {
 public:
     Philosopher(Fork* leftFork, Fork* rightFork);
+    Philosopher(Fork* leftFork, Fork* rightFork, std::string name);
+
+    std::string GetName();
     void Eat();
     void Think();
     void PickupFork();
@@ -18,6 +21,7 @@ public:
 private:
     Fork* _leftFork;
     Fork* _rightFork;
+    std::string _name;
 };
 
 

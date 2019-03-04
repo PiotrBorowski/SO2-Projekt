@@ -12,10 +12,10 @@ vector<Philosopher*> philosophers;
 
 void PhilosopherLifeCycle(Philosopher* philosopher)
 {
-    printf("mysle\n");
+    std::cout << philosopher->GetName() + ": mysle\n";
     philosopher->Think();
     philosopher->PickupFork();
-    printf("jem\n");
+    std::cout << philosopher->GetName() + ": jem\n";
     philosopher->Eat();
     philosopher->PutDownFork();
 }
@@ -27,7 +27,8 @@ int main()
     thread threads[THREAD_NUMBER];
 
     for(int i = 0; i<THREAD_NUMBER; i++){
-        philosophers.push_back(new Philosopher(new Fork(), new Fork()));
+        std::string name("philosopher");
+        philosophers.push_back(new Philosopher(new Fork(), new Fork(), name + std::to_string(i)));
     }
 
     for(int i = 0; i<THREAD_NUMBER; i++){
