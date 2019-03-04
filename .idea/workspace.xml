@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="SO2_Projekt" targetName="foo" />
+      <config projectName="SO2_Projekt" targetName="Continuous" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalStart" />
+      <config projectName="SO2_Projekt" targetName="ContinuousUpdate" />
+      <config projectName="SO2_Projekt" targetName="cmbzip2" />
+      <config projectName="SO2_Projekt" targetName="cmlibarchive" />
+      <config projectName="SO2_Projekt" targetName="NightlySubmit" />
+      <config projectName="SO2_Projekt" targetName="NightlyMemCheck" />
+      <config projectName="SO2_Projekt" targetName="NightlyConfigure" />
+      <config projectName="SO2_Projekt" targetName="ctest" />
+      <config projectName="SO2_Projekt" targetName="cmliblzma" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalSubmit" />
+      <config projectName="SO2_Projekt" targetName="ContinuousConfigure" />
+      <config projectName="SO2_Projekt" targetName="cpack" />
+      <config projectName="SO2_Projekt" targetName="Nightly" />
+      <config projectName="SO2_Projekt" targetName="memcheck_fail" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestsC" />
+      <config projectName="SO2_Projekt" targetName="pseudonl_BC" />
+      <config projectName="SO2_Projekt" targetName="runcompilecommands" />
+      <config projectName="SO2_Projekt" targetName="CMakeLibTests" />
+      <config projectName="SO2_Projekt" targetName="uninstall" />
+      <config projectName="SO2_Projekt" targetName="CPackLib" />
+      <config projectName="SO2_Projekt" targetName="cmake" />
+      <config projectName="SO2_Projekt" targetName="ContinuousTest" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestProcess" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalUpdate" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalTest" />
+      <config projectName="SO2_Projekt" targetName="ContinuousSubmit" />
+      <config projectName="SO2_Projekt" targetName="NightlyUpdate" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestsCxx" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalCoverage" />
+      <config projectName="SO2_Projekt" targetName="NightlyStart" />
+      <config projectName="SO2_Projekt" targetName="SO2_Projekt" />
+      <config projectName="SO2_Projekt" targetName="ContinuousBuild" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestSharedForward" />
+      <config projectName="SO2_Projekt" targetName="cmzlib" />
+      <config projectName="SO2_Projekt" targetName="ContinuousStart" />
+      <config projectName="SO2_Projekt" targetName="cmcompress" />
+      <config projectName="SO2_Projekt" targetName="NightlyCoverage" />
+      <config projectName="SO2_Projekt" targetName="CTestLib" />
+      <config projectName="SO2_Projekt" targetName="pseudo_purify" />
+      <config projectName="SO2_Projekt" targetName="cmexpat" />
+      <config projectName="SO2_Projekt" targetName="NightlyTest" />
+      <config projectName="SO2_Projekt" targetName="ContinuousCoverage" />
+      <config projectName="SO2_Projekt" targetName="cmcurl" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestDynload" />
+      <config projectName="SO2_Projekt" targetName="pseudo_BC" />
+      <config projectName="SO2_Projekt" targetName="LIBCURL" />
+      <config projectName="SO2_Projekt" targetName="NightlyBuild" />
+      <config projectName="SO2_Projekt" targetName="pseudonl_purify" />
+      <config projectName="SO2_Projekt" targetName="CMakeLib" />
+      <config projectName="SO2_Projekt" targetName="pseudo_valgrind" />
+      <config projectName="SO2_Projekt" targetName="Experimental" />
+      <config projectName="SO2_Projekt" targetName="cmsys_c" />
+      <config projectName="SO2_Projekt" targetName="NightlyMemoryCheck" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalMemCheck" />
+      <config projectName="SO2_Projekt" targetName="ContinuousMemCheck" />
+      <config projectName="SO2_Projekt" targetName="cmIML_test" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalConfigure" />
+      <config projectName="SO2_Projekt" targetName="cmsys" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalBuild" />
+      <config projectName="SO2_Projekt" targetName="cmjsoncpp" />
+      <config projectName="SO2_Projekt" targetName="pseudonl_valgrind" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f7c5410-39bd-4aea-95b7-9b5e70278420" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Fork.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Fork.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Fork.h" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Fork.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Philosopher.h" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Philosopher.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/main.cpp" afterDir="false" />
+    </list>
+    <ignored path="$USER_HOME$/cmake-3.2.2/cmake-build-debug/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/KWStyle/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmbzip2/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmlibarchive/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeLib/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmliblzma/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeTests/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/KWIML/test/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeLib/PseudoMemcheck/NoLog/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmlibarchive/libarchive/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/RunCMake/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmexpat/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmcurl/lib/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/Doxygen/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmcurl/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Auxiliary/bash-completion/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeLib/PseudoMemcheck/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmcompress/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/KWIML/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/FindPackageModeMakefileTest/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Source/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Auxiliary/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmjsoncpp/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/Sphinx/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Source/kwsys/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Utilities/cmzlib/CMakeFiles/" />
+    <ignored path="$USER_HOME$/cmake-3.2.2/Tests/CMakeOnly/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" />
+        <option value="$PROJECT_DIR$/SO2Threads/Fork.h" />
+        <option value="$PROJECT_DIR$/SO2Threads/Fork.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/SO2Threads/Philosopher.h" />
+        <option value="$PROJECT_DIR$/SO2Threads/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="120" />
+    <option name="y" value="27" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SO2_Projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SO2-Projekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SO2_Projekt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SO2_Projekt" TARGET_NAME="SO2_Projekt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SO2_Projekt" RUN_TARGET_NAME="SO2_Projekt">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f7c5410-39bd-4aea-95b7-9b5e70278420" name="Default Changelist" comment="" />
+      <created>1551650406581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551650406581</updated>
+      <workItem from="1551650409025" duration="322000" />
+      <workItem from="1551651192457" duration="352000" />
+      <workItem from="1551651593056" duration="162000" />
+      <workItem from="1551651816183" duration="2321000" />
+      <workItem from="1551692248659" duration="2158000" />
+      <workItem from="1551694500805" duration="137000" />
+      <workItem from="1551694659706" duration="22000" />
+      <workItem from="1551694684561" duration="16000" />
+      <workItem from="1551694737155" duration="48000" />
+      <workItem from="1551694788204" duration="6000" />
+      <workItem from="1551694809396" duration="7000" />
+      <workItem from="1551694880083" duration="51000" />
+      <workItem from="1551694967748" duration="230000" />
+      <workItem from="1551695211519" duration="261000" />
+      <workItem from="1551695541701" duration="13000" />
+      <workItem from="1551695573476" duration="26000" />
+      <workItem from="1551695612491" duration="118000" />
+      <workItem from="1551695738566" duration="23000" />
+      <workItem from="1551695775168" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6344000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="120" y="27" width="1400" height="1000" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3293944" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295063" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295063" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295063" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3295063" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32875144" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

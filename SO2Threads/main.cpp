@@ -1,10 +1,13 @@
 #include <iostream>
 #include <thread>
+#include "Fork.h"
 
 using namespace std;
 
+Fork fork;
+
 void print(){
-    printf("z innego watku");
+    fork.Use();
 }
 
 const int THREAD_NUMBER = 5;

@@ -1,0 +1,4 @@
+/home/borowski/CLion/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug

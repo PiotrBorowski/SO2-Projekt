@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SO2_Projekt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SO2_Projekt">
+				<Option output="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/SO2_Projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/."/>
+					<Add directory="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 SO2_Projekt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SO2_Projekt/fast">
+				<Option output="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/SO2_Projekt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/."/>
+					<Add directory="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 SO2_Projekt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/main.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

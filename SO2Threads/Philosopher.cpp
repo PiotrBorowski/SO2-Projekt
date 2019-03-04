@@ -3,3 +3,10 @@
 //
 
 #include "Philosopher.h"
+
+Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
+{
+    _leftFork = leftFork;
+    _rightFork = rightFork;
+}
+

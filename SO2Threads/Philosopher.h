@@ -6,8 +6,18 @@
 #define SO2_PROJEKT_PHILOSOPHER_H
 
 
-class Philosopher {
+#include "Fork.h"
 
+class Philosopher {
+public:
+    Philosopher(Fork* leftFork, Fork* rightFork);
+    void Eat();
+    void Think();
+    void PickupFork();
+    void PutDownFork();
+private:
+    Fork* _leftFork;
+    Fork* _rightFork;
 };
 
 

@@ -3,3 +3,9 @@
 //
 
 #include "Fork.h"
+
+void Fork::Use() {
+    _mutex.lock();
+    printf("zablokowany");
+    _mutex.unlock();
+}
