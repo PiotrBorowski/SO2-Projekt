@@ -9,7 +9,10 @@
 
 class Fork {
 public:
-    void Use();
+    Fork();
+    void Take();
+    void PutDown();
+
 private:
     std::mutex _mutex;
 };

@@ -3,6 +3,7 @@
 //
 
 #include "Philosopher.h"
+#include<thread>
 
 Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
 {
@@ -10,3 +11,17 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
     _rightFork = rightFork;
 }
 
+void Philosopher::Think() {
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+}
+void Philosopher::PutDownFork() {
+    _leftFork->Take();
+    _rightFork->Take();
+}
+void Philosopher::PickupFork() {
+    _leftFork->PutDown();
+    _rightFork->PutDown();
+}
+void Philosopher::Eat() {
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+}

@@ -4,8 +4,14 @@
 
 #include "Fork.h"
 
-void Fork::Use() {
+Fork::Fork(){
+
+}
+
+void Fork::Take() {
     _mutex.lock();
-    printf("zablokowany");
+}
+
+void Fork::PutDown() {
     _mutex.unlock();
 }

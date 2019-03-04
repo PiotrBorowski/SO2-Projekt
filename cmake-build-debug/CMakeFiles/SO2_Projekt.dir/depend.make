@@ -9,5 +9,6 @@ CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o: ../SO2Threads/Philosoph
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o: ../SO2Threads/Philosopher.h
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o: ../SO2Threads/Fork.h
+CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o: ../SO2Threads/Philosopher.h
 CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o: ../SO2Threads/main.cpp
 
