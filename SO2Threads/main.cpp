@@ -1,6 +1,8 @@
 #include <iostream>
 #include <thread>
 #include <vector>
+#include <atomic>
+
 #include "Philosopher.h"
 #include "Fork.h"
 
@@ -10,9 +12,9 @@ using namespace std;
 vector<Philosopher*> philosophers;
 
 
-void PhilosopherLifeCycle(Philosopher* philosopher)
+void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 {
-    for(;;){
+    while(running){
         std::cout << philosopher->GetName() + ": mysle\n";
         philosopher->Think();
         philosopher->PickupFork();
@@ -35,9 +37,20 @@ int main()
         philosophers.push_back(new Philosopher(new Fork(), new Fork(), name + std::to_string(i)));
     }
 
+    std::atomic<bool> running{true};
+
     for(int i = 0; i<THREAD_NUMBER; i++){
-        threads[i] = thread(PhilosopherLifeCycle, philosophers[i]);
+        threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
     }
+
+
+    char esc = 0;
+    do{
+        esc = getchar();
+    }
+    while(esc != 'e');
+
+    running = false;
 
     for(int i = 0; i<THREAD_NUMBER; i++){
         threads[i].join();

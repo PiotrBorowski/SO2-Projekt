@@ -10,14 +10,6 @@
 mutex
 -
 
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.cpp
-Philosopher.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
-thread
--
-cstdlib
--
-
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
 Fork.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
@@ -28,6 +20,8 @@ iostream
 thread
 -
 vector
+-
+atomic
 -
 Philosopher.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
