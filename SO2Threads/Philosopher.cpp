@@ -3,7 +3,8 @@
 //
 
 #include "Philosopher.h"
-#include<thread>
+#include <thread>
+#include <cstdlib>
 
 Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
 {
@@ -12,15 +13,13 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
     _name = "default";
 }
 
-Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name)
+Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Philosopher(leftFork, rightFork)
 {
-    _leftFork = leftFork;
-    _rightFork = rightFork;
     _name = name;
 }
 
 void Philosopher::Think() {
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::this_thread::sleep_for(std::chrono::seconds(1 + std::rand()%2 ));
 }
 
 void Philosopher::PutDownFork() {
@@ -34,7 +33,7 @@ void Philosopher::PickupFork() {
 }
 
 void Philosopher::Eat() {
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::this_thread::sleep_for(std::chrono::seconds(2 + std::rand()%2 ));
 }
 
 std::string Philosopher::GetName(){

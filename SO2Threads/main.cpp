@@ -12,18 +12,22 @@ vector<Philosopher*> philosophers;
 
 void PhilosopherLifeCycle(Philosopher* philosopher)
 {
-    std::cout << philosopher->GetName() + ": mysle\n";
-    philosopher->Think();
-    philosopher->PickupFork();
-    std::cout << philosopher->GetName() + ": jem\n";
-    philosopher->Eat();
-    philosopher->PutDownFork();
+    for(;;){
+        std::cout << philosopher->GetName() + ": mysle\n";
+        philosopher->Think();
+        philosopher->PickupFork();
+        std::cout << philosopher->GetName() + ": jem\n";
+        philosopher->Eat();
+        philosopher->PutDownFork();
+    }
 }
 
 const int THREAD_NUMBER = 5;
 
 int main()
 {
+    srand(time(NULL));
+
     thread threads[THREAD_NUMBER];
 
     for(int i = 0; i<THREAD_NUMBER; i++){
