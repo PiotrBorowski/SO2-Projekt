@@ -2,6 +2,7 @@
 #include <thread>
 #include <vector>
 #include <atomic>
+#include <ncurses.h>
 
 #include "Philosopher.h"
 #include "Fork.h"
@@ -29,6 +30,12 @@ const int THREAD_NUMBER = 5;
 int main()
 {
     srand(time(NULL));
+
+    initscr();
+    refresh();
+    printw("DINNING PHILOSOPHERS");
+    getch();
+    endwin();
 
     thread threads[THREAD_NUMBER];
 

@@ -1,1 +1,1 @@
-/usr/bin/c++   -pthread -g   -pthread CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o  -o SO2_Projekt 
+/usr/bin/c++   -pthread -lncurses -g   -pthread -lncurses CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o  -o SO2_Projekt -lncurses 
