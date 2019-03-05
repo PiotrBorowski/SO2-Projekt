@@ -11,15 +11,14 @@ using namespace std;
 
 
 vector<Philosopher*> philosophers;
-
+int rows = 0;
+int columns = 0;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 {
     while(running){
-        std::cout << philosopher->GetName() + ": mysle\n";
         philosopher->Think();
         philosopher->PickupFork();
-        std::cout << philosopher->GetName() + ": jem\n";
         philosopher->Eat();
         philosopher->PutDownFork();
     }
@@ -33,9 +32,9 @@ int main()
 
     initscr();
     refresh();
+    getmaxyx(stdscr, rows, columns);
     printw("DINNING PHILOSOPHERS");
-    getch();
-    endwin();
+
 
     thread threads[THREAD_NUMBER];
 
@@ -50,19 +49,27 @@ int main()
         threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
     }
 
+    for(int i = 0; i<THREAD_NUMBER; i++){
 
-    char esc = 0;
-    do{
-        esc = getchar();
+        mvprintw(i+1,0,philosophers[i]->GetName().c_str());
     }
-    while(esc != 'e');
+
+
+    int esc = 0;
+    do{
+        noecho();
+        esc = getch();
+    }
+    while(esc != 27);
 
     running = false;
 
     for(int i = 0; i<THREAD_NUMBER; i++){
         threads[i].join();
     }
-    
+
+    endwin();
+
     return 0;
 }
 
