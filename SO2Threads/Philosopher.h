@@ -14,6 +14,7 @@ public:
     Philosopher(Fork* leftFork, Fork* rightFork, std::string name);
 
     std::string GetName();
+    std::string GetState();
     void Eat();
     void Think();
     void PickupFork();
@@ -22,6 +23,7 @@ private:
     Fork* _leftFork;
     Fork* _rightFork;
     std::string _name;
+    std::string _state = "nic";
 };
 
 

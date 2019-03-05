@@ -74,9 +74,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f7c5410-39bd-4aea-95b7-9b5e70278420" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO2Threads/Philosopher.h" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/Philosopher.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SO2Threads/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SO2Threads/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SO2_Projekt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SO2_Projekt" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/cmake-3.2.2/cmake-build-debug/" />
     <ignored path="$USER_HOME$/cmake-3.2.2/CMakeFiles/" />
@@ -121,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="435">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -133,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="69" />
+            <state relative-caret-position="15">
+              <caret line="7" selection-start-line="7" selection-end-line="9" />
               <folding>
                 <element signature="e#43#67#0" expanded="true" />
               </folding>
@@ -145,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="375">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/SO2Threads/Fork.h" />
         <option value="$PROJECT_DIR$/SO2Threads/Fork.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/SO2Threads/Philosopher.h" />
         <option value="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" />
+        <option value="$PROJECT_DIR$/SO2Threads/Philosopher.h" />
         <option value="$PROJECT_DIR$/SO2Threads/main.cpp" />
       </list>
     </option>
@@ -290,15 +290,16 @@
       <workItem from="1551696096747" duration="1920000" />
       <workItem from="1551698031120" duration="39000" />
       <workItem from="1551727424453" duration="9800000" />
-      <workItem from="1551814747010" duration="2565000" />
+      <workItem from="1551814747010" duration="4746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20889000" />
+    <option name="totallyTimeSpent" value="23070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="932" height="1053" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24717833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -312,7 +313,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32900432" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3088553" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.30844155" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32900432" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32792208" />
@@ -352,7 +353,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/SO2Threads/main.cpp</url>
-          <line>61</line>
+          <line>75</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -390,27 +391,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="69" />
+        <state relative-caret-position="15">
+          <caret line="7" selection-start-line="7" selection-end-line="9" />
           <folding>
             <element signature="e#43#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="435">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
