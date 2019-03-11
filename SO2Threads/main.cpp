@@ -4,6 +4,7 @@
 #include <atomic>
 #include <ncurses.h>
 #include <mutex>
+#include <unistd.h>
 #include "Philosopher.h"
 #include "Fork.h"
 
@@ -33,11 +34,12 @@ void Display(std::atomic<bool>& displaying){
         for(int i = 0; i<THREAD_NUMBER; i++){
             mvprintw(i+1,0,philosophers[i]->GetName().c_str());
             mvprintw(i+1,15,philosophers[i]->GetState().c_str());
+            mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
         }
         refresh();
         displayMutex.unlock();
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        usleep(10000);
     }
 }
 

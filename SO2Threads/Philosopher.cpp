@@ -5,12 +5,14 @@
 #include "Philosopher.h"
 #include <thread>
 #include <cstdlib>
+#include <unistd.h>
 
 Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
 {
     _leftFork = leftFork;
     _rightFork = rightFork;
     _name = "default";
+    _progress = 0;
 }
 
 Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Philosopher(leftFork, rightFork)
@@ -20,7 +22,11 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Ph
 
 void Philosopher::Think() {
     _state = "mysle";
-    std::this_thread::sleep_for(std::chrono::seconds(2 + std::rand()%2 ));
+    _progress = 0;
+    for (int i = 0; i < 10; ++i) {
+        _progress++;
+        usleep(300000 + std::rand() % 100000);
+    }
 }
 
 void Philosopher::PutDownFork() {
@@ -35,7 +41,11 @@ void Philosopher::PickupFork() {
 
 void Philosopher::Eat() {
     _state = "jem";
-    std::this_thread::sleep_for(std::chrono::seconds(2 + std::rand()%2 ));
+    _progress = 0;
+    for (int i = 0; i < 10; ++i) {
+        _progress++;
+        usleep(300000 + std::rand() % 100000);
+    }
 }
 
 std::string Philosopher::GetName(){
@@ -44,4 +54,8 @@ std::string Philosopher::GetName(){
 
 std::string Philosopher::GetState() {
     return _state;
+}
+
+int Philosopher::GetProgress() {
+    return _progress;
 }

@@ -15,6 +15,7 @@ public:
 
     std::string GetName();
     std::string GetState();
+    int GetProgress();
     void Eat();
     void Think();
     void PickupFork();
@@ -24,6 +25,7 @@ private:
     Fork* _rightFork;
     std::string _name;
     std::string _state = "nic";
+    int _progress;
 };
 
 
