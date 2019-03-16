@@ -8,13 +8,19 @@
 
 #include "Fork.h"
 
+enum State
+{
+    eating,
+    thinking
+};
+
 class Philosopher {
 public:
     Philosopher(Fork* leftFork, Fork* rightFork);
     Philosopher(Fork* leftFork, Fork* rightFork, std::string name);
 
     std::string GetName();
-    std::string GetState();
+    State GetState();
     int GetProgress();
     void Eat();
     void Think();
@@ -24,7 +30,7 @@ private:
     Fork* _leftFork;
     Fork* _rightFork;
     std::string _name;
-    std::string _state = "nic";
+    State _state;
     int _progress;
 };
 
