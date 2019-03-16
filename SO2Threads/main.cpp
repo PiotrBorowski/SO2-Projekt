@@ -19,7 +19,8 @@ const int THREAD_NUMBER = 5;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 {
-    while(running){
+    while(running)
+    {
         philosopher->Think();
         philosopher->PickupFork();
         philosopher->Eat();
@@ -27,12 +28,24 @@ void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
     }
 }
 
-void Display(std::atomic<bool>& displaying){
-    while(displaying){
+void Display(std::atomic<bool>& displaying)
+{
+    while(displaying)
+    {
         clear();
         for(int i = 0; i<THREAD_NUMBER; i++){
             mvprintw(i+1,0,philosophers[i]->GetName().c_str());
-            mvprintw(i+1,15,philosophers[i]->GetState().c_str());
+
+            switch(philosophers[i]->GetState())
+            {
+                case State::eating:
+                    mvprintw(i+1,15,"eating");
+                    break;
+                case State::thinking:
+                    mvprintw(i+1,15,"thinking");
+                    break;
+            }
+
             mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
         }
         refresh();

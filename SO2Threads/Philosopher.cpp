@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <unistd.h>
 
+
 Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
 {
     _leftFork = leftFork;
@@ -21,7 +22,7 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Ph
 }
 
 void Philosopher::Think() {
-    _state = "mysle";
+    _state = State::thinking;
     _progress = 0;
     for (int i = 0; i < 10; ++i) {
         _progress++;
@@ -41,7 +42,7 @@ void Philosopher::PickupFork() {
 }
 
 void Philosopher::Eat() {
-    _state = "jem";
+    _state = State::eating;
     _progress = 0;
     for (int i = 0; i < 10; ++i) {
         _progress++;
@@ -53,7 +54,7 @@ std::string Philosopher::GetName(){
     return _name;
 }
 
-std::string Philosopher::GetState() {
+State Philosopher::GetState() {
     return _state;
 }
 
