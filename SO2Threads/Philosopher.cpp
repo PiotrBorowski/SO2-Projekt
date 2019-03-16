@@ -30,13 +30,14 @@ void Philosopher::Think() {
 }
 
 void Philosopher::PutDownFork() {
-    _leftFork->Take();
-    _rightFork->Take();
+    _leftFork->PutDown();
+    _rightFork->PutDown();
 }
 
 void Philosopher::PickupFork() {
-    _leftFork->PutDown();
-    _rightFork->PutDown();
+
+    _leftFork->Take();
+    _rightFork->Take();
 }
 
 void Philosopher::Eat() {

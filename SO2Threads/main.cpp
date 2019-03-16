@@ -29,7 +29,6 @@ void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 
 void Display(std::atomic<bool>& displaying){
     while(displaying){
-        displayMutex.lock();
         clear();
         for(int i = 0; i<THREAD_NUMBER; i++){
             mvprintw(i+1,0,philosophers[i]->GetName().c_str());
@@ -37,7 +36,6 @@ void Display(std::atomic<bool>& displaying){
             mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
         }
         refresh();
-        displayMutex.unlock();
 
         usleep(10000);
     }
@@ -50,7 +48,6 @@ int main()
 
     initscr();
     refresh();
-    getmaxyx(stdscr, rows, columns);
 
     thread threads[THREAD_NUMBER];
 
