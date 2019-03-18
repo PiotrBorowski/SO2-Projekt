@@ -19,9 +19,7 @@ void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
     while(running)
     {
         philosopher->Think();
-        philosopher->PickupFork();
         philosopher->Eat();
-        philosopher->PutDownFork();
     }
 }
 
