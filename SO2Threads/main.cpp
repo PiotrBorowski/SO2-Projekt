@@ -12,9 +12,6 @@ using namespace std;
 
 
 vector<Philosopher*> philosophers;
-std::mutex displayMutex;
-int rows = 0;
-int columns = 0;
 const int THREAD_NUMBER = 5;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
@@ -22,9 +19,7 @@ void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
     while(running)
     {
         philosopher->Think();
-        philosopher->PickupFork();
         philosopher->Eat();
-        philosopher->PutDownFork();
     }
 }
 

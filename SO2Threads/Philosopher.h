@@ -24,9 +24,11 @@ public:
     int GetProgress();
     void Eat();
     void Think();
-    void PickupFork();
-    void PutDownFork();
+
 private:
+    void PickupForks();
+    void PutDownForks();
+
     Fork* _leftFork;
     Fork* _rightFork;
     std::string _name;
