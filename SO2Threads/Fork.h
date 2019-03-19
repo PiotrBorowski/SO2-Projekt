@@ -14,7 +14,7 @@ public:
     void PutDown();
 
 private:
-    std::mutex _mutex;
+
 };
 
 

@@ -21,6 +21,11 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Ph
     _name = name;
 }
 
+Philosopher::~Philosopher() {
+    delete _leftFork;
+    delete _rightFork;
+}
+
 void Philosopher::Think() {
     _state = State::thinking;
     _progress = 0;

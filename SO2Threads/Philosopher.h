@@ -18,7 +18,7 @@ class Philosopher {
 public:
     Philosopher(Fork* leftFork, Fork* rightFork);
     Philosopher(Fork* leftFork, Fork* rightFork, std::string name);
-
+    ~Philosopher();
     std::string GetName();
     State GetState();
     int GetProgress();

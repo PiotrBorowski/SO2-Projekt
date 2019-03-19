@@ -90,6 +90,10 @@ int main()
     }
     displayThread.join();
 
+    for(int i = 0; i<THREAD_NUMBER; i++){
+        delete philosophers[i];
+    }
+
     endwin();
 
     return 0;
