@@ -4,61 +4,61 @@
     <generated>
       <config projectName="SO2_Projekt" targetName="cmjsoncpp" />
       <config projectName="SO2_Projekt" targetName="ExperimentalCoverage" />
+      <config projectName="SO2_Projekt" targetName="cmsysTestProcess" />
       <config projectName="SO2_Projekt" targetName="NightlyBuild" />
-      <config projectName="SO2_Projekt" targetName="foo" />
       <config projectName="SO2_Projekt" targetName="NightlyCoverage" />
       <config projectName="SO2_Projekt" targetName="Continuous" />
       <config projectName="SO2_Projekt" targetName="ExperimentalStart" />
-      <config projectName="SO2_Projekt" targetName="uninstall" />
-      <config projectName="SO2_Projekt" targetName="NightlyTest" />
+      <config projectName="SO2_Projekt" targetName="CMakeLib" />
       <config projectName="SO2_Projekt" targetName="pseudo_BC" />
       <config projectName="SO2_Projekt" targetName="ExperimentalConfigure" />
       <config projectName="SO2_Projekt" targetName="ContinuousBuild" />
       <config projectName="SO2_Projekt" targetName="LIBCURL" />
+      <config projectName="SO2_Projekt" targetName="pseudonl_purify" />
       <config projectName="SO2_Projekt" targetName="cmIML_test" />
+      <config projectName="SO2_Projekt" targetName="cpack" />
       <config projectName="SO2_Projekt" targetName="cmexpat" />
       <config projectName="SO2_Projekt" targetName="cmcurl" />
-      <config projectName="SO2_Projekt" targetName="pseudonl_purify" />
-      <config projectName="SO2_Projekt" targetName="NightlyStart" />
-      <config projectName="SO2_Projekt" targetName="ExperimentalMemCheck" />
-      <config projectName="SO2_Projekt" targetName="cmcompress" />
-      <config projectName="SO2_Projekt" targetName="pseudo_purify" />
       <config projectName="SO2_Projekt" targetName="ContinuousSubmit" />
+      <config projectName="SO2_Projekt" targetName="CMakeLibTests" />
+      <config projectName="SO2_Projekt" targetName="pseudo_valgrind" />
+      <config projectName="SO2_Projekt" targetName="memcheck_fail" />
       <config projectName="SO2_Projekt" targetName="CTestLib" />
       <config projectName="SO2_Projekt" targetName="NightlyUpdate" />
-      <config projectName="SO2_Projekt" targetName="cmzlib" />
-      <config projectName="SO2_Projekt" targetName="ContinuousCoverage" />
+      <config projectName="SO2_Projekt" targetName="cmsys" />
+      <config projectName="SO2_Projekt" targetName="ExperimentalMemCheck" />
       <config projectName="SO2_Projekt" targetName="cmliblzma" />
       <config projectName="SO2_Projekt" targetName="ContinuousMemCheck" />
-      <config projectName="SO2_Projekt" targetName="NightlyMemoryCheck" />
       <config projectName="SO2_Projekt" targetName="cmlibarchive" />
-      <config projectName="SO2_Projekt" targetName="cmsysTestProcess" />
+      <config projectName="SO2_Projekt" targetName="NightlyMemoryCheck" />
       <config projectName="SO2_Projekt" targetName="ExperimentalSubmit" />
+      <config projectName="SO2_Projekt" targetName="cmcompress" />
       <config projectName="SO2_Projekt" targetName="ContinuousConfigure" />
       <config projectName="SO2_Projekt" targetName="cmbzip2" />
       <config projectName="SO2_Projekt" targetName="ExperimentalBuild" />
       <config projectName="SO2_Projekt" targetName="cmake" />
       <config projectName="SO2_Projekt" targetName="cmsysTestSharedForward" />
-      <config projectName="SO2_Projekt" targetName="memcheck_fail" />
+      <config projectName="SO2_Projekt" targetName="uninstall" />
       <config projectName="SO2_Projekt" targetName="NightlyConfigure" />
       <config projectName="SO2_Projekt" targetName="runcompilecommands" />
       <config projectName="SO2_Projekt" targetName="ContinuousStart" />
-      <config projectName="SO2_Projekt" targetName="Experimental" />
-      <config projectName="SO2_Projekt" targetName="CMakeLibTests" />
+      <config projectName="SO2_Projekt" targetName="foo" />
+      <config projectName="SO2_Projekt" targetName="NightlyMemCheck" />
       <config projectName="SO2_Projekt" targetName="cmsys_c" />
+      <config projectName="SO2_Projekt" targetName="NightlyStart" />
       <config projectName="SO2_Projekt" targetName="ExperimentalUpdate" />
-      <config projectName="SO2_Projekt" targetName="CPackLib" />
+      <config projectName="SO2_Projekt" targetName="ContinuousCoverage" />
       <config projectName="SO2_Projekt" targetName="ContinuousTest" />
       <config projectName="SO2_Projekt" targetName="ctest" />
       <config projectName="SO2_Projekt" targetName="cmsysTestsC" />
       <config projectName="SO2_Projekt" targetName="pseudonl_valgrind" />
-      <config projectName="SO2_Projekt" targetName="CMakeLib" />
-      <config projectName="SO2_Projekt" targetName="cmsys" />
+      <config projectName="SO2_Projekt" targetName="cmzlib" />
+      <config projectName="SO2_Projekt" targetName="pseudo_purify" />
       <config projectName="SO2_Projekt" targetName="Nightly" />
-      <config projectName="SO2_Projekt" targetName="NightlyMemCheck" />
-      <config projectName="SO2_Projekt" targetName="pseudo_valgrind" />
+      <config projectName="SO2_Projekt" targetName="Experimental" />
+      <config projectName="SO2_Projekt" targetName="NightlyTest" />
       <config projectName="SO2_Projekt" targetName="NightlySubmit" />
-      <config projectName="SO2_Projekt" targetName="cpack" />
+      <config projectName="SO2_Projekt" targetName="CPackLib" />
       <config projectName="SO2_Projekt" targetName="SO2_Projekt" />
       <config projectName="SO2_Projekt" targetName="cmsysTestDynload" />
       <config projectName="SO2_Projekt" targetName="ExperimentalTest" />
@@ -140,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="364">
+              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -150,7 +150,7 @@
         <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -158,17 +158,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state relative-caret-position="240">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="-45">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -176,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="440">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#43#67#0" expanded="true" />
               </folding>
@@ -202,19 +202,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/SO2Threads/Fork.h" />
-        <option value="$PROJECT_DIR$/SO2Threads/Fork.cpp" />
         <option value="$PROJECT_DIR$/SO2Threads/Philosopher.h" />
         <option value="$PROJECT_DIR$/SO2Threads/Philosopher.cpp" />
+        <option value="$PROJECT_DIR$/SO2Threads/Fork.h" />
+        <option value="$PROJECT_DIR$/SO2Threads/Fork.cpp" />
         <option value="$PROJECT_DIR$/SO2Threads/main.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
-    <option name="y" value="27" />
-    <option name="width" value="917" />
-    <option name="height" value="1053" />
+    <option name="y" value="25" />
+    <option name="width" value="927" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -310,32 +310,42 @@
       <workItem from="1552317330646" duration="3657000" />
       <workItem from="1552743846498" duration="3089000" />
       <workItem from="1552920784439" duration="261000" />
-      <workItem from="1553003881187" duration="5640000" />
+      <workItem from="1553003881187" duration="5875000" />
+      <workItem from="1553084163516" duration="2343000" />
+      <workItem from="1553094028639" duration="3422000" />
     </task>
+    <task id="LOCAL-00001" summary="dodano destruktory">
+      <created>1553010001173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553010001180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38978000" />
+    <option name="totallyTimeSpent" value="44978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1455451" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30533484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49418926" visible="true" weight="0.24298055" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4892168" weight="0.24298055" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49943247" weight="0.32792208" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4986165" weight="0.30561554" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50581074" side_tool="true" visible="true" weight="0.24298055" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49418926" weight="0.3261339" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4980631" weight="0.3265086" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980631" weight="0.30561554" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51191825" side_tool="true" visible="true" weight="0.3261339" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.48808172" visible="true" weight="0.3261339" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32792208" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -371,7 +381,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dodano enum stanu" />
     <MESSAGE value="usunieto niepotrzebne zmienne" />
-    <option name="LAST_COMMIT_MESSAGE" value="usunieto niepotrzebne zmienne" />
+    <MESSAGE value="dodano destruktory" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodano destruktory" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
@@ -384,13 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -400,34 +404,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="364">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SO2Threads/Fork.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SO2Threads/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        <state relative-caret-position="-45">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO2Threads/Philosopher.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
           </folding>
         </state>
       </provider>

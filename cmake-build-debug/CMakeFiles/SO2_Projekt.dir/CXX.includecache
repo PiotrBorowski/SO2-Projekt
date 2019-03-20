@@ -6,8 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.cpp
+Fork.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
+
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
 mutex
+-
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.cpp
+Philosopher.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
+thread
+-
+cstdlib
+-
+unistd.h
 -
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h

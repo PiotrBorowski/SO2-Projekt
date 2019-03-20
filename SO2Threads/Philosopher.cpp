@@ -12,13 +12,12 @@ Philosopher::Philosopher(Fork* leftFork, Fork* rightFork)
 {
     _leftFork = leftFork;
     _rightFork = rightFork;
-    _name = "default";
     _progress = 0;
 }
 
-Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, std::string name) : Philosopher(leftFork, rightFork)
+Philosopher::Philosopher(Fork* leftFork, Fork* rightFork, int id) : Philosopher(leftFork, rightFork)
 {
-    _name = name;
+    _id = id;
 }
 
 Philosopher::~Philosopher() {
@@ -47,7 +46,9 @@ void Philosopher::PickupForks() {
 }
 
 void Philosopher::Eat() {
+
     PickupForks();
+
 
     _state = State::eating;
     _progress = 0;
@@ -60,7 +61,7 @@ void Philosopher::Eat() {
 }
 
 std::string Philosopher::GetName(){
-    return _name;
+    return "philosopher" + std::to_string(_id);
 }
 
 State Philosopher::GetState() {
@@ -69,4 +70,8 @@ State Philosopher::GetState() {
 
 int Philosopher::GetProgress() {
     return _progress;
+}
+
+int Philosopher::GetId() {
+    return _id;
 }

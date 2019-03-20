@@ -12,6 +12,7 @@ using namespace std;
 
 
 vector<Philosopher*> philosophers;
+vector<Fork*> forks;
 const int THREAD_NUMBER = 5;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
@@ -60,10 +61,18 @@ int main()
     thread threads[THREAD_NUMBER];
 
     for(int i = 0; i<THREAD_NUMBER; i++){
-        std::string name("philosopher");
-        philosophers.push_back(new Philosopher(new Fork(), new Fork(), name + std::to_string(i)));
+        forks.push_back(new Fork(-1));
     }
 
+    for(int i = 0; i<THREAD_NUMBER; i++){
+        if(i == THREAD_NUMBER-1)
+        {
+            philosophers.push_back(new Philosopher(forks[0], forks[i], i ));
+        }
+        else{
+            philosophers.push_back(new Philosopher(forks[i+1], forks[i], i));
+        }
+    }
 
     std::atomic<bool> running{true};
 

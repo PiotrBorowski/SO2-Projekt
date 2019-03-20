@@ -17,11 +17,14 @@ enum State
 class Philosopher {
 public:
     Philosopher(Fork* leftFork, Fork* rightFork);
-    Philosopher(Fork* leftFork, Fork* rightFork, std::string name);
+    Philosopher(Fork* leftFork, Fork* rightFork, int id);
     ~Philosopher();
+
     std::string GetName();
     State GetState();
     int GetProgress();
+    int GetId();
+
     void Eat();
     void Think();
 
@@ -31,9 +34,9 @@ private:
 
     Fork* _leftFork;
     Fork* _rightFork;
-    std::string _name;
     State _state;
     int _progress;
+    int _id;
 };
 
 

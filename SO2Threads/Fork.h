@@ -6,15 +6,25 @@
 #define SO2_PROJEKT_FORK_H
 #include <mutex>
 
+enum ForkState{
+    clean,
+    dirty
+};
+
 
 class Fork {
 public:
-    Fork();
+    Fork(int ownerId);
     void Take();
+    void Use();
     void PutDown();
+    void CleanUp();
 
 private:
-
+    std::mutex _mutex;
+    bool _isTaken = false;
+    ForkState _forkState;
+    int _ownerId;
 };
 
 
