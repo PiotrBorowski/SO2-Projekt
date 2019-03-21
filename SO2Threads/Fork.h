@@ -15,7 +15,7 @@ enum ForkState{
 class Fork {
 public:
     Fork(int ownerId);
-    void Take();
+    void Take(int ownerId);
     void Use();
     void PutDown();
     void CleanUp();

@@ -60,19 +60,20 @@ int main()
 
     thread threads[THREAD_NUMBER];
 
-    for(int i = 0; i<THREAD_NUMBER; i++){
-        forks.push_back(new Fork(-1));
+    for(int i = 0; i<THREAD_NUMBER-1; i++){
+            forks.push_back(new Fork(i));
     }
 
-    for(int i = 0; i<THREAD_NUMBER; i++){
-        if(i == THREAD_NUMBER-1)
-        {
-            philosophers.push_back(new Philosopher(forks[0], forks[i], i ));
-        }
-        else{
+    //ostatni widelec nalezy takze do pierwszego filozofa
+    forks.push_back(new Fork(0));
+
+
+    for(int i = 0; i<THREAD_NUMBER-1; i++){
             philosophers.push_back(new Philosopher(forks[i+1], forks[i], i));
-        }
     }
+    // ostatnie filozof ma dostep do widelca pierwszego i ostatniego
+    philosophers.push_back(new Philosopher(forks[0], forks[THREAD_NUMBER-1], THREAD_NUMBER-1));
+
 
     std::atomic<bool> running{true};
 

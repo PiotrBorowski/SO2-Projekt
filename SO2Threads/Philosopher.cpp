@@ -41,8 +41,8 @@ void Philosopher::PutDownForks() {
 
 void Philosopher::PickupForks() {
 
-    _leftFork->Take();
-    _rightFork->Take();
+    _leftFork->Take(_id);
+    _rightFork->Take(_id);
 }
 
 void Philosopher::Eat() {

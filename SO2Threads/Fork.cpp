@@ -9,8 +9,9 @@ Fork::Fork(int ownerId){
     _ownerId = ownerId;
 }
 
-void Fork::Take() {
+void Fork::Take(int ownerId) {
     _mutex.lock();
+    _ownerId = ownerId;
     _isTaken = true;
 }
 
@@ -20,6 +21,7 @@ void Fork::Use(){
 
 void Fork::PutDown() {
     _mutex.unlock();
+    _ownerId = -1;
     _isTaken = false;
 }
 
