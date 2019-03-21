@@ -45,11 +45,16 @@ void Philosopher::PickupForks() {
     _rightFork->Take(_id);
 }
 
+void Philosopher::UseForks() {
+    _leftFork->Use();
+    _rightFork->Use();
+}
+
 void Philosopher::Eat() {
 
     PickupForks();
 
-
+    UseForks();
     _state = State::eating;
     _progress = 0;
     for (int i = 0; i < 10; ++i) {

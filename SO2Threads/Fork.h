@@ -19,6 +19,7 @@ public:
     void Use();
     void PutDown();
     void CleanUp();
+    void Request(int id);
 
 private:
     std::mutex _mutex;

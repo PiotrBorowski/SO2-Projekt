@@ -31,6 +31,7 @@ public:
 private:
     void PickupForks();
     void PutDownForks();
+    void UseForks();
 
     Fork* _leftFork;
     Fork* _rightFork;

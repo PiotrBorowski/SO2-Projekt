@@ -10,21 +10,32 @@ Fork::Fork(int ownerId){
 }
 
 void Fork::Take(int ownerId) {
-    _mutex.lock();
     _ownerId = ownerId;
     _isTaken = true;
 }
 
 void Fork::Use(){
+    _mutex.lock();
     _forkState = ForkState::dirty;
 }
 
 void Fork::PutDown() {
     _mutex.unlock();
-    _ownerId = -1;
     _isTaken = false;
 }
 
 void Fork::CleanUp() {
     _forkState = ForkState::clean;
+}
+
+void Fork::Request(int id) {
+    if(_forkState == ForkState::dirty){
+        //mutexa dolozyc
+        this->CleanUp();
+        this->Take(id);
+    }
+    else{
+        // czekaj az skonczy jesc
+        //tutaj bedzie condition variable ktory zwolni sie gdy wlasciciel odłozy widelec
+    }
 }
