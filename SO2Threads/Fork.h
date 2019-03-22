@@ -5,6 +5,7 @@
 #ifndef SO2_PROJEKT_FORK_H
 #define SO2_PROJEKT_FORK_H
 #include <mutex>
+#include <condition_variable>
 
 enum ForkState{
     clean,
@@ -22,7 +23,12 @@ public:
     void Request(int id);
 
 private:
+    void SetConditionVariable();
+    void UnlockConditionVariable();
+
     std::mutex _mutex;
+    std::mutex _conditionMutex;
+    std::condition_variable _condition_variable;
     bool _isTaken = false;
     ForkState _forkState;
     int _ownerId;

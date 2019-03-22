@@ -79,6 +79,7 @@ int main()
 
     for(int i = 0; i<THREAD_NUMBER; i++){
         threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
+        usleep(1000000);
     }
 
     std::atomic<bool> displaying{true};

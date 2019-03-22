@@ -40,12 +40,12 @@ void Philosopher::PutDownForks() {
 }
 
 void Philosopher::PickupForks() {
-
-    _leftFork->Take(_id);
-    _rightFork->Take(_id);
+    _leftFork->Request(this->_id);
+    _rightFork->Request(this->_id);
 }
 
 void Philosopher::UseForks() {
+
     _leftFork->Use();
     _rightFork->Use();
 }

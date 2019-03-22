@@ -15,27 +15,41 @@ void Fork::Take(int ownerId) {
 }
 
 void Fork::Use(){
-    _mutex.lock();
-    _forkState = ForkState::dirty;
+    //_mutex.lock();
 }
 
 void Fork::PutDown() {
-    _mutex.unlock();
     _isTaken = false;
+    _forkState = ForkState::dirty;
+    //_mutex.unlock();
+    UnlockConditionVariable();
 }
 
 void Fork::CleanUp() {
     _forkState = ForkState::clean;
 }
 
+void Fork::SetConditionVariable() {
+    std::unique_lock<std::mutex> lock(_conditionMutex);
+    _condition_variable.wait(lock);
+}
+
+void Fork::UnlockConditionVariable() {
+    std::unique_lock<std::mutex> lock(_conditionMutex);
+    _condition_variable.notify_all();
+}
+
 void Fork::Request(int id) {
-    if(_forkState == ForkState::dirty){
-        //mutexa dolozyc
-        this->CleanUp();
-        this->Take(id);
+    while(_ownerId != id){
+        if(_forkState == ForkState::clean){
+            SetConditionVariable();
+        }
+        else{
+            std::lock_guard<std::mutex> lock(_mutex);
+
+            this->CleanUp();
+            this->Take(id);
+        }
     }
-    else{
-        // czekaj az skonczy jesc
-        //tutaj bedzie condition variable ktory zwolni sie gdy wlasciciel odłozy widelec
-    }
+
 }
