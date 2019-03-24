@@ -45,7 +45,6 @@ void Philosopher::PickupForks() {
 }
 
 void Philosopher::UseForks() {
-
     _leftFork->Use();
     _rightFork->Use();
 }
@@ -59,7 +58,7 @@ void Philosopher::Eat() {
     _progress = 0;
     for (int i = 0; i < 10; ++i) {
         _progress++;
-        usleep(300000 + std::rand() % 100000);
+        usleep(500000 + std::rand() % 100000);
     }
 
     PutDownForks();

@@ -22,6 +22,9 @@ public:
     void CleanUp();
     void Request(int id);
 
+    int GetOwnerId();
+    std::string GetState();
+
 private:
     void SetConditionVariable();
     void UnlockConditionVariable();

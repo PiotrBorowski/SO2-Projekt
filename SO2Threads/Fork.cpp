@@ -15,13 +15,13 @@ void Fork::Take(int ownerId) {
 }
 
 void Fork::Use(){
-    //_mutex.lock();
+    _mutex.lock();
 }
 
 void Fork::PutDown() {
     _isTaken = false;
     _forkState = ForkState::dirty;
-    //_mutex.unlock();
+    _mutex.unlock();
     UnlockConditionVariable();
 }
 
@@ -52,4 +52,17 @@ void Fork::Request(int id) {
         }
     }
 
+}
+
+int Fork::GetOwnerId() {
+    return _ownerId;
+}
+
+std::string Fork::GetState() {
+    switch(_forkState){
+        case ForkState::clean:
+            return "clean";
+        case ForkState::dirty:
+            return "dirty";
+    }
 }

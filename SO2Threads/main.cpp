@@ -43,6 +43,11 @@ void Display(std::atomic<bool>& displaying)
             }
 
             mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
+
+            mvprintw(THREAD_NUMBER+2+i, 0, std::to_string(i).c_str());
+            mvprintw(THREAD_NUMBER+2+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
+            mvprintw(THREAD_NUMBER+2+i, 40, forks[i]->GetState().c_str());
+
         }
         refresh();
 
@@ -60,13 +65,11 @@ int main()
 
     thread threads[THREAD_NUMBER];
 
+    //pierwszy i drugi widelec jest dla filozofa0
+    forks.push_back(new Fork(0));
     for(int i = 0; i<THREAD_NUMBER-1; i++){
             forks.push_back(new Fork(i));
     }
-
-    //ostatni widelec nalezy takze do pierwszego filozofa
-    forks.push_back(new Fork(0));
-
 
     for(int i = 0; i<THREAD_NUMBER-1; i++){
             philosophers.push_back(new Philosopher(forks[i+1], forks[i], i));
@@ -79,7 +82,7 @@ int main()
 
     for(int i = 0; i<THREAD_NUMBER; i++){
         threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
-        usleep(1000000);
+        //usleep(500000);
     }
 
     std::atomic<bool> displaying{true};
