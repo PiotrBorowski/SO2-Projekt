@@ -13,7 +13,7 @@ using namespace std;
 
 vector<Philosopher*> philosophers;
 vector<Fork*> forks;
-const int THREAD_NUMBER = 5;
+const int THREAD_NUMBER = 7;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 {
@@ -44,10 +44,19 @@ void Display(std::atomic<bool>& displaying)
 
             mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
 
-            mvprintw(THREAD_NUMBER+2+i, 0, std::to_string(i).c_str());
-            mvprintw(THREAD_NUMBER+2+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
-            mvprintw(THREAD_NUMBER+2+i, 40, forks[i]->GetState().c_str());
-
+            mvprintw(THREAD_NUMBER+2,   0,  "Forks");
+            mvprintw(THREAD_NUMBER+2,   15,  "Owner");
+            mvprintw(THREAD_NUMBER+2,   55,  "is taken?");
+            mvprintw(THREAD_NUMBER+3+i, 0,  std::to_string(i).c_str());
+            mvprintw(THREAD_NUMBER+3+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
+            mvprintw(THREAD_NUMBER+3+i, 40, forks[i]->GetState().c_str());
+            if(forks[i]->GetIsTaken())
+            {
+                mvprintw(THREAD_NUMBER+3+i, 55, "yes");
+            }
+            else{
+                mvprintw(THREAD_NUMBER+3+i, 55, "no");
+            }
         }
         refresh();
 

@@ -11,11 +11,11 @@ Fork::Fork(int ownerId){
 
 void Fork::Take(int ownerId) {
     _ownerId = ownerId;
-    _isTaken = true;
 }
 
 void Fork::Use(){
     _mutex.lock();
+    _isTaken = true;
 }
 
 void Fork::PutDown() {
@@ -66,3 +66,7 @@ std::string Fork::GetState() {
             return "dirty";
     }
 }
+
+bool Fork::GetIsTaken() {
+    return _isTaken;
+};

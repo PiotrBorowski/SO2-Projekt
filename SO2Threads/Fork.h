@@ -24,6 +24,7 @@ public:
 
     int GetOwnerId();
     std::string GetState();
+    bool GetIsTaken();
 
 private:
     void SetConditionVariable();

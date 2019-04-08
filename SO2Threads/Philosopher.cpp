@@ -27,9 +27,9 @@ Philosopher::~Philosopher() {
 
 void Philosopher::Think() {
     _state = State::thinking;
-    _progress = 0;
+    _progress = 10;
     for (int i = 0; i < 10; ++i) {
-        _progress++;
+        _progress--;
         usleep(300000 + std::rand() % 100000);
     }
 }
@@ -55,9 +55,9 @@ void Philosopher::Eat() {
 
     UseForks();
     _state = State::eating;
-    _progress = 0;
+    _progress = 10;
     for (int i = 0; i < 10; ++i) {
-        _progress++;
+        _progress--;
         usleep(500000 + std::rand() % 100000);
     }
 
