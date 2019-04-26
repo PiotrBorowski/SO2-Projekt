@@ -35,27 +35,35 @@ void Display(std::atomic<bool>& displaying)
             switch(philosophers[i]->GetState())
             {
                 case State::eating:
+                    attron(COLOR_PAIR(2));
                     mvprintw(i+1,15,"eating");
+                    attroff(COLOR_PAIR(2));
                     break;
                 case State::thinking:
+                    attron(COLOR_PAIR(1));
                     mvprintw(i+1,15,"thinking");
+                    attroff(COLOR_PAIR(1));
                     break;
             }
 
-            mvprintw(i+1,40,std::to_string(philosophers[i]->GetProgress()).c_str());
+            mvprintw(i+1,30,std::to_string(philosophers[i]->GetProgress()).c_str());
 
             mvprintw(THREAD_NUMBER+2,   0,  "Forks");
             mvprintw(THREAD_NUMBER+2,   15,  "Owner");
-            mvprintw(THREAD_NUMBER+2,   55,  "is taken?");
+            mvprintw(THREAD_NUMBER+2,   45,  "is taken?");
             mvprintw(THREAD_NUMBER+3+i, 0,  std::to_string(i).c_str());
             mvprintw(THREAD_NUMBER+3+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
-            mvprintw(THREAD_NUMBER+3+i, 40, forks[i]->GetState().c_str());
+            mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetState().c_str());
             if(forks[i]->GetIsTaken())
             {
-                mvprintw(THREAD_NUMBER+3+i, 55, "yes");
+                attron(COLOR_PAIR(2));
+                mvprintw(THREAD_NUMBER+3+i, 45, "yes");
+                attroff(COLOR_PAIR(2));
             }
             else{
-                mvprintw(THREAD_NUMBER+3+i, 55, "no");
+                attron(COLOR_PAIR(1));
+                mvprintw(THREAD_NUMBER+3+i, 45, "no");
+                attroff(COLOR_PAIR(1));
             }
         }
         refresh();
@@ -70,6 +78,9 @@ int main()
     srand(time(NULL));
 
     initscr();
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK);
+    init_pair(2, COLOR_GREEN, COLOR_BLACK);
     refresh();
 
     thread threads[THREAD_NUMBER];
@@ -91,7 +102,6 @@ int main()
 
     for(int i = 0; i<THREAD_NUMBER; i++){
         threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
-        //usleep(500000);
     }
 
     std::atomic<bool> displaying{true};
