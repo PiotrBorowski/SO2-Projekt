@@ -58,13 +58,17 @@ int Fork::GetOwnerId() {
     return _ownerId;
 }
 
-std::string Fork::GetState() {
+std::string Fork::GetStateString() {
     switch(_forkState){
         case ForkState::clean:
             return "clean";
         case ForkState::dirty:
             return "dirty";
     }
+}
+
+ForkState Fork::GetState(){
+    return _forkState;
 }
 
 bool Fork::GetIsTaken() {

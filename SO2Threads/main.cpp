@@ -13,7 +13,7 @@ using namespace std;
 
 vector<Philosopher*> philosophers;
 vector<Fork*> forks;
-const int THREAD_NUMBER = 7;
+const int THREAD_NUMBER = 5;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 {
@@ -53,7 +53,24 @@ void Display(std::atomic<bool>& displaying)
             mvprintw(THREAD_NUMBER+2,   45,  "is taken?");
             mvprintw(THREAD_NUMBER+3+i, 0,  std::to_string(i).c_str());
             mvprintw(THREAD_NUMBER+3+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
-            mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetState().c_str());
+
+            switch(forks[i]->GetState())
+            {
+                case ForkState::dirty:
+                    attron(COLOR_PAIR(3));
+                    mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetStateString().c_str());
+                    attron(COLOR_PAIR(3));
+
+                    break;
+                case ForkState::clean:
+                    attron(COLOR_PAIR(4));
+                    mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetStateString().c_str());
+                    attron(COLOR_PAIR(4));
+                    break;
+                default:
+                    break;
+            }
+
             if(forks[i]->GetIsTaken())
             {
                 attron(COLOR_PAIR(2));
@@ -81,6 +98,8 @@ int main()
     start_color();
     init_pair(1, COLOR_RED, COLOR_BLACK);
     init_pair(2, COLOR_GREEN, COLOR_BLACK);
+    init_pair(3, COLOR_YELLOW, COLOR_BLACK);
+    init_pair(4, COLOR_BLUE, COLOR_BLACK);
     refresh();
 
     thread threads[THREAD_NUMBER];

@@ -23,7 +23,8 @@ public:
     void Request(int id);
 
     int GetOwnerId();
-    std::string GetState();
+    std::string GetStateString();
+    ForkState GetState();
     bool GetIsTaken();
 
 private:
