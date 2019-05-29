@@ -4,7 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o"
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o"
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o"
   "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o"
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o"
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o"
+  "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o"
   "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o"
   "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/main.cpp" "/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o"
   )

@@ -96,11 +96,95 @@ CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.s
 
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o: ../SO2Threads/Patient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.s
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o: ../SO2Threads/CleaningPersonnel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.s
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: ../SO2Threads/Doctor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.s
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o: ../SO2Threads/Nurse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.s
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/Drug.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.s
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o: CMakeFiles/SO2_Projekt.dir/flags.make
+CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o: ../SO2Threads/OperatingRoom.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o -c /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.cpp
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.cpp > CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.i
+
+CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.cpp -o CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.s
+
 # Object files for target SO2_Projekt
 SO2_Projekt_OBJECTS = \
 "CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o" \
 "CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o" \
-"CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o"
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o" \
+"CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o"
 
 # External object files for target SO2_Projekt
 SO2_Projekt_EXTERNAL_OBJECTS =
@@ -108,9 +192,15 @@ SO2_Projekt_EXTERNAL_OBJECTS =
 SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/main.cpp.o
 SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Philosopher.cpp.o
 SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o
+SO2_Projekt: CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o
 SO2_Projekt: CMakeFiles/SO2_Projekt.dir/build.make
 SO2_Projekt: CMakeFiles/SO2_Projekt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SO2_Projekt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable SO2_Projekt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SO2_Projekt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

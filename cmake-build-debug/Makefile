@@ -123,6 +123,87 @@ SO2_Projekt/fast:
 	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/build
 .PHONY : SO2_Projekt/fast
 
+SO2Threads/CleaningPersonnel.o: SO2Threads/CleaningPersonnel.cpp.o
+
+.PHONY : SO2Threads/CleaningPersonnel.o
+
+# target to build an object file
+SO2Threads/CleaningPersonnel.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o
+.PHONY : SO2Threads/CleaningPersonnel.cpp.o
+
+SO2Threads/CleaningPersonnel.i: SO2Threads/CleaningPersonnel.cpp.i
+
+.PHONY : SO2Threads/CleaningPersonnel.i
+
+# target to preprocess a source file
+SO2Threads/CleaningPersonnel.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.i
+.PHONY : SO2Threads/CleaningPersonnel.cpp.i
+
+SO2Threads/CleaningPersonnel.s: SO2Threads/CleaningPersonnel.cpp.s
+
+.PHONY : SO2Threads/CleaningPersonnel.s
+
+# target to generate assembly for a file
+SO2Threads/CleaningPersonnel.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.s
+.PHONY : SO2Threads/CleaningPersonnel.cpp.s
+
+SO2Threads/Doctor.o: SO2Threads/Doctor.cpp.o
+
+.PHONY : SO2Threads/Doctor.o
+
+# target to build an object file
+SO2Threads/Doctor.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o
+.PHONY : SO2Threads/Doctor.cpp.o
+
+SO2Threads/Doctor.i: SO2Threads/Doctor.cpp.i
+
+.PHONY : SO2Threads/Doctor.i
+
+# target to preprocess a source file
+SO2Threads/Doctor.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.i
+.PHONY : SO2Threads/Doctor.cpp.i
+
+SO2Threads/Doctor.s: SO2Threads/Doctor.cpp.s
+
+.PHONY : SO2Threads/Doctor.s
+
+# target to generate assembly for a file
+SO2Threads/Doctor.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.s
+.PHONY : SO2Threads/Doctor.cpp.s
+
+SO2Threads/Drug.o: SO2Threads/Drug.cpp.o
+
+.PHONY : SO2Threads/Drug.o
+
+# target to build an object file
+SO2Threads/Drug.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o
+.PHONY : SO2Threads/Drug.cpp.o
+
+SO2Threads/Drug.i: SO2Threads/Drug.cpp.i
+
+.PHONY : SO2Threads/Drug.i
+
+# target to preprocess a source file
+SO2Threads/Drug.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.i
+.PHONY : SO2Threads/Drug.cpp.i
+
+SO2Threads/Drug.s: SO2Threads/Drug.cpp.s
+
+.PHONY : SO2Threads/Drug.s
+
+# target to generate assembly for a file
+SO2Threads/Drug.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.s
+.PHONY : SO2Threads/Drug.cpp.s
+
 SO2Threads/Fork.o: SO2Threads/Fork.cpp.o
 
 .PHONY : SO2Threads/Fork.o
@@ -149,6 +230,87 @@ SO2Threads/Fork.s: SO2Threads/Fork.cpp.s
 SO2Threads/Fork.cpp.s:
 	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.s
 .PHONY : SO2Threads/Fork.cpp.s
+
+SO2Threads/Nurse.o: SO2Threads/Nurse.cpp.o
+
+.PHONY : SO2Threads/Nurse.o
+
+# target to build an object file
+SO2Threads/Nurse.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o
+.PHONY : SO2Threads/Nurse.cpp.o
+
+SO2Threads/Nurse.i: SO2Threads/Nurse.cpp.i
+
+.PHONY : SO2Threads/Nurse.i
+
+# target to preprocess a source file
+SO2Threads/Nurse.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.i
+.PHONY : SO2Threads/Nurse.cpp.i
+
+SO2Threads/Nurse.s: SO2Threads/Nurse.cpp.s
+
+.PHONY : SO2Threads/Nurse.s
+
+# target to generate assembly for a file
+SO2Threads/Nurse.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.s
+.PHONY : SO2Threads/Nurse.cpp.s
+
+SO2Threads/OperatingRoom.o: SO2Threads/OperatingRoom.cpp.o
+
+.PHONY : SO2Threads/OperatingRoom.o
+
+# target to build an object file
+SO2Threads/OperatingRoom.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o
+.PHONY : SO2Threads/OperatingRoom.cpp.o
+
+SO2Threads/OperatingRoom.i: SO2Threads/OperatingRoom.cpp.i
+
+.PHONY : SO2Threads/OperatingRoom.i
+
+# target to preprocess a source file
+SO2Threads/OperatingRoom.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.i
+.PHONY : SO2Threads/OperatingRoom.cpp.i
+
+SO2Threads/OperatingRoom.s: SO2Threads/OperatingRoom.cpp.s
+
+.PHONY : SO2Threads/OperatingRoom.s
+
+# target to generate assembly for a file
+SO2Threads/OperatingRoom.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.s
+.PHONY : SO2Threads/OperatingRoom.cpp.s
+
+SO2Threads/Patient.o: SO2Threads/Patient.cpp.o
+
+.PHONY : SO2Threads/Patient.o
+
+# target to build an object file
+SO2Threads/Patient.cpp.o:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.o
+.PHONY : SO2Threads/Patient.cpp.o
+
+SO2Threads/Patient.i: SO2Threads/Patient.cpp.i
+
+.PHONY : SO2Threads/Patient.i
+
+# target to preprocess a source file
+SO2Threads/Patient.cpp.i:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.i
+.PHONY : SO2Threads/Patient.cpp.i
+
+SO2Threads/Patient.s: SO2Threads/Patient.cpp.s
+
+.PHONY : SO2Threads/Patient.s
+
+# target to generate assembly for a file
+SO2Threads/Patient.cpp.s:
+	$(MAKE) -f CMakeFiles/SO2_Projekt.dir/build.make CMakeFiles/SO2_Projekt.dir/SO2Threads/Patient.cpp.s
+.PHONY : SO2Threads/Patient.cpp.s
 
 SO2Threads/Philosopher.o: SO2Threads/Philosopher.cpp.o
 
@@ -213,9 +375,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SO2_Projekt"
 	@echo "... edit_cache"
+	@echo "... SO2Threads/CleaningPersonnel.o"
+	@echo "... SO2Threads/CleaningPersonnel.i"
+	@echo "... SO2Threads/CleaningPersonnel.s"
+	@echo "... SO2Threads/Doctor.o"
+	@echo "... SO2Threads/Doctor.i"
+	@echo "... SO2Threads/Doctor.s"
+	@echo "... SO2Threads/Drug.o"
+	@echo "... SO2Threads/Drug.i"
+	@echo "... SO2Threads/Drug.s"
 	@echo "... SO2Threads/Fork.o"
 	@echo "... SO2Threads/Fork.i"
 	@echo "... SO2Threads/Fork.s"
+	@echo "... SO2Threads/Nurse.o"
+	@echo "... SO2Threads/Nurse.i"
+	@echo "... SO2Threads/Nurse.s"
+	@echo "... SO2Threads/OperatingRoom.o"
+	@echo "... SO2Threads/OperatingRoom.i"
+	@echo "... SO2Threads/OperatingRoom.s"
+	@echo "... SO2Threads/Patient.o"
+	@echo "... SO2Threads/Patient.i"
+	@echo "... SO2Threads/Patient.s"
 	@echo "... SO2Threads/Philosopher.o"
 	@echo "... SO2Threads/Philosopher.i"
 	@echo "... SO2Threads/Philosopher.s"

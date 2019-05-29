@@ -14,6 +14,6 @@ include_directories(.)
 include_directories(SO2Threads)
 
 add_executable(SO2_Projekt
-        SO2Threads/main.cpp SO2Threads/Philosopher.cpp SO2Threads/Philosopher.h SO2Threads/Fork.cpp SO2Threads/Fork.h)
+        SO2Threads/main.cpp SO2Threads/Philosopher.cpp SO2Threads/Philosopher.h SO2Threads/Fork.cpp SO2Threads/Fork.h SO2Threads/Patient.cpp SO2Threads/Patient.h SO2Threads/CleaningPersonnel.cpp SO2Threads/CleaningPersonnel.h SO2Threads/Doctor.cpp SO2Threads/Doctor.h SO2Threads/Nurse.cpp SO2Threads/Nurse.h SO2Threads/Drug.cpp SO2Threads/Drug.h SO2Threads/OperatingRoom.cpp SO2Threads/OperatingRoom.h)
 
 target_link_libraries(SO2_Projekt ncurses)

@@ -88,10 +88,46 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
 		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.cpp">
 			<Option target="SO2_Projekt"/>
 		</Unit>
 		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp">
+			<Option target="SO2_Projekt"/>
+		</Unit>
+		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h">
 			<Option target="SO2_Projekt"/>
 		</Unit>
 		<Unit filename="/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.cpp">
