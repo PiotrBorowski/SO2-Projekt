@@ -58,7 +58,7 @@ void Philosopher::Eat() {
     _progress = 10;
     for (int i = 0; i < 10; ++i) {
         _progress--;
-        usleep(500000 + std::rand() % 100000);
+        usleep(300000 + std::rand() % 100000);
     }
 
     PutDownForks();
