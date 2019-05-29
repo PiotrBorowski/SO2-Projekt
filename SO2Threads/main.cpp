@@ -13,6 +13,7 @@ using namespace std;
 
 vector<Philosopher*> philosophers;
 vector<Fork*> forks;
+std::mutex displayMutex;
 const int THREAD_NUMBER = 5;
 
 void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
@@ -29,6 +30,7 @@ void Display(std::atomic<bool>& displaying)
     while(displaying)
     {
         clear();
+        displayMutex.lock();
         for(int i = 0; i<THREAD_NUMBER; i++){
             mvprintw(i+1,0,philosophers[i]->GetName().c_str());
 
@@ -50,6 +52,7 @@ void Display(std::atomic<bool>& displaying)
 
             mvprintw(THREAD_NUMBER+2,   0,  "Forks");
             mvprintw(THREAD_NUMBER+2,   15,  "Owner");
+            mvprintw(THREAD_NUMBER+2,   30,  "State");
             mvprintw(THREAD_NUMBER+2,   45,  "is taken?");
             mvprintw(THREAD_NUMBER+3+i, 0,  std::to_string(i).c_str());
             mvprintw(THREAD_NUMBER+3+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
@@ -60,7 +63,6 @@ void Display(std::atomic<bool>& displaying)
                     attron(COLOR_PAIR(3));
                     mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetStateString().c_str());
                     attron(COLOR_PAIR(3));
-
                     break;
                 case ForkState::clean:
                     attron(COLOR_PAIR(4));
@@ -83,6 +85,7 @@ void Display(std::atomic<bool>& displaying)
                 attroff(COLOR_PAIR(1));
             }
         }
+        displayMutex.unlock();
         refresh();
 
         usleep(10000);
