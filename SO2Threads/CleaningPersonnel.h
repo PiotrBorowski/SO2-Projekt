@@ -13,6 +13,8 @@ public:
     void CleanOperatingRoom(OperatingRoom * operatingRoom);
     void CleanCorridor();
 private:
+    short _progress;
+    short _id;
 };
 
 

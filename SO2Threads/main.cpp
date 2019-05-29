@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include "Philosopher.h"
 #include "Fork.h"
+#include "Patient.h"
 
 using namespace std;
 
@@ -22,6 +23,35 @@ void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
     {
         philosopher->Think();
         philosopher->Eat();
+    }
+}
+
+void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
+{
+    //TODO: dobieranie doktorow
+    Doctor* doctor = new Doctor();
+
+    while (running)
+    {
+        short result = patient->VisitDoctor(doctor);
+
+        while(result == Action::VisitDoctor)
+        {
+           // result = patient->VisitDoctor(nextDoctor);
+        }
+
+        switch(result)
+        {
+            case Action::TakeDrug:
+                //podanie leku u pielegniarki
+                //patient->TakeDrug(nurse, drug);
+                break;
+
+            case Action::UndergoOperation:
+                //poddanie sie operacji
+                //patient->UndergoOperation(surgeon, nurse, operatingRoom);
+                break;
+        }
     }
 }
 
