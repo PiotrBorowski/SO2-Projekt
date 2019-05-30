@@ -37,3 +37,7 @@ void OperatingRoom::Exit() {
     _state = State::dirty;
     UnlockConditionVariable();
 }
+
+void OperatingRoom::Take(int ownerId) {
+    _ownerId = ownerId;
+}

@@ -8,13 +8,21 @@
 
 #include "OperatingRoom.h"
 
+enum PersonelState {
+    cleaningOR,
+    cleaningCorridor
+};
+
 class CleaningPersonnel {
 public:
     void CleanOperatingRoom(OperatingRoom * operatingRoom);
     void CleanCorridor();
+    int GetId();
+    PersonelState GetState();
 private:
     short _progress;
     short _id;
+    PersonelState _state;
 };
 
 

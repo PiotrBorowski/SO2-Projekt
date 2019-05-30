@@ -8,11 +8,11 @@
 
 #include "Fork.h"
 
-enum State
-{
-    eating,
-    thinking
-};
+//enum State
+//{
+//    eating,
+//    thinking
+//};
 
 class Philosopher {
 public:
@@ -21,7 +21,7 @@ public:
     ~Philosopher();
 
     std::string GetName();
-    State GetState();
+    //State GetState();
     int GetProgress();
     int GetId();
 
@@ -35,7 +35,7 @@ private:
 
     Fork* _leftFork;
     Fork* _rightFork;
-    State _state;
+//    State _state;
     int _progress;
     int _id;
 };
