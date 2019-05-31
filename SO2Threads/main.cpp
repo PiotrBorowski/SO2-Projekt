@@ -19,10 +19,10 @@ vector<Patient*> patients;
 vector<Nurse*> nurses;
 vector<Drug*> drugs;
 vector<Doctor*> doctors;
-
+OperatingRoom* operatingRoom = new OperatingRoom();
 
 std::mutex displayMutex;
-const int THREAD_NUMBER = 5;
+const int THREAD_NUMBER_PERSONNEL = 5;
 //
 //void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
 //{
@@ -66,8 +66,8 @@ void CleaningPersonnelLifeCycle(CleaningPersonnel* cleaningPersonnel, OperatingR
 {
     while(running)
     {
-        cleaningPersonnel->CleanOperatingRoom(operatingRoom);
         cleaningPersonnel->CleanCorridor();
+        cleaningPersonnel->CleanOperatingRoom(operatingRoom);
     }
 }
 
@@ -77,7 +77,8 @@ void Display(std::atomic<bool>& displaying)
     {
         clear();
         displayMutex.lock();
-        for(int i = 0; i<THREAD_NUMBER; i++){
+        mvprintw(0, 10, std::to_string(operatingRoom->GetOwnerId()).c_str());
+        for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
             mvprintw(i+1,0, std::to_string(cleaningPersonnel[i]->GetId()).c_str());
 
             switch(cleaningPersonnel[i]->GetState())
@@ -94,7 +95,9 @@ void Display(std::atomic<bool>& displaying)
                     break;
             }
 
-//            mvprintw(i+1,30,std::to_string(philosophers[i]->GetProgress()).c_str());
+
+
+            mvprintw(i+1,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
 //
 //            mvprintw(THREAD_NUMBER+2,   0,  "Forks");
 //            mvprintw(THREAD_NUMBER+2,   15,  "Owner");
@@ -154,7 +157,7 @@ int main()
 
 
 
-    thread threads[THREAD_NUMBER];
+    thread threadsPersonnel[THREAD_NUMBER_PERSONNEL];
 
 
 
@@ -190,11 +193,12 @@ int main()
 //        threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
 //    }
 
-    OperatingRoom* operatingRoom = new OperatingRoom();
 
-    for(int i = 0; i<THREAD_NUMBER; i++){
-        CleaningPersonnel* personnel = new CleaningPersonnel();
-        threads[i] = thread(CleaningPersonnelLifeCycle, personnel, operatingRoom, std::ref(running));
+
+    for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
+        CleaningPersonnel* personnel = new CleaningPersonnel(i+1);
+        cleaningPersonnel.push_back(personnel);
+        threadsPersonnel[i] = thread(CleaningPersonnelLifeCycle, personnel, operatingRoom, std::ref(running));
     }
 
     std::atomic<bool> displaying{true};
@@ -211,8 +215,8 @@ int main()
     running = false;
     displaying = false;
 
-    for(int i = 0; i<THREAD_NUMBER; i++){
-        threads[i].join();
+    for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
+        threadsPersonnel[i].join();
     }
     displayThread.join();
 

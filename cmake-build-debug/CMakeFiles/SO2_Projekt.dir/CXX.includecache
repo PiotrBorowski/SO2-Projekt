@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
-mutex
--
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.h
+OperatingRoom.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.h
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.h
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.h
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
 condition_variable
 -
 
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
-Fork.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
+Doctor.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.h
+Nurse.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.h
+Drug.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.h
+OperatingRoom.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/main.cpp
 iostream
@@ -31,8 +45,8 @@ mutex
 -
 unistd.h
 -
-Philosopher.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Philosopher.h
-Fork.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Fork.h
+Patient.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
+CleaningPersonnel.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.h
 

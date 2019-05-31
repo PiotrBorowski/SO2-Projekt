@@ -15,9 +15,11 @@ enum PersonelState {
 
 class CleaningPersonnel {
 public:
+    CleaningPersonnel(short id);
     void CleanOperatingRoom(OperatingRoom * operatingRoom);
     void CleanCorridor();
     int GetId();
+    int GetProgress();
     PersonelState GetState();
 private:
     short _progress;

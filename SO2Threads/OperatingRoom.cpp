@@ -6,16 +6,16 @@
 #include "OperatingRoom.h"
 
 void OperatingRoom::Request(int id) {
+    if(_ownerId != id) {
+        if (_state == State::clean) {
+            SetConditionVariable();
+        }
 
-    if(_state == State::clean) {
-        SetConditionVariable();
+        std::lock_guard<std::mutex> lock(_mutex);
+
+        this->CleanUp();
+        this->Take(id);
     }
-
-    std::lock_guard<std::mutex> lock(_mutex);
-
-    this->CleanUp();
-    this->Take(id);
-
 }
 
 
@@ -35,9 +35,22 @@ void OperatingRoom::CleanUp() {
 
 void OperatingRoom::Exit() {
     _state = State::dirty;
+    _mutex.unlock();
     UnlockConditionVariable();
 }
 
 void OperatingRoom::Take(int ownerId) {
     _ownerId = ownerId;
+}
+
+void OperatingRoom::Use() {
+    _mutex.lock();
+}
+
+short OperatingRoom::GetOwnerId() {
+    return _ownerId;
+}
+
+OperatingRoom::OperatingRoom() {
+    _state = State::dirty;
 }

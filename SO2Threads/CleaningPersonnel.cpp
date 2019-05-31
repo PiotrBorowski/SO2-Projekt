@@ -10,6 +10,7 @@
 void CleaningPersonnel::CleanOperatingRoom(OperatingRoom *operatingRoom) {
 
     operatingRoom->Request(this->_id);
+    operatingRoom->Use();
     _state = PersonelState::cleaningOR;
 
     _progress = 10;
@@ -17,7 +18,7 @@ void CleaningPersonnel::CleanOperatingRoom(OperatingRoom *operatingRoom) {
         _progress--;
         usleep(300000 + std::rand() % 100000);
     }
-
+    operatingRoom->Exit();
 }
 
 void CleaningPersonnel::CleanCorridor() {
@@ -35,4 +36,12 @@ int CleaningPersonnel::GetId() {
 
 PersonelState CleaningPersonnel::GetState() {
     return _state;
+}
+
+CleaningPersonnel::CleaningPersonnel(short id) {
+    _id = id;
+}
+
+int CleaningPersonnel::GetProgress() {
+    return _progress;
 }

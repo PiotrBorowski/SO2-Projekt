@@ -14,8 +14,11 @@ enum State{
 
 class OperatingRoom {
 public:
+    OperatingRoom();
     void Request(int id);
     void Exit();
+    void Use();
+    short GetOwnerId();
 private:
     bool _isBusy;
     short _ownerId;
