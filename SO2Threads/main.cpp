@@ -11,9 +11,6 @@
 using namespace std;
 
 
-//vector<Philosopher*> philosophers;
-//vector<Fork*> forks;
-
 vector<CleaningPersonnel*> cleaningPersonnel;
 vector<Patient*> patients;
 vector<Nurse*> nurses;
@@ -22,16 +19,13 @@ vector<Doctor*> doctors;
 OperatingRoom* operatingRoom = new OperatingRoom();
 
 std::mutex displayMutex;
+
 const int THREAD_NUMBER_PERSONNEL = 5;
-//
-//void PhilosopherLifeCycle(Philosopher* philosopher, std::atomic<bool>& running)
-//{
-//    while(running)
-//    {
-//        philosopher->Think();
-//        philosopher->Eat();
-//    }
-//}
+const int THREAD_NUMBER_PATIENT = 5;
+const int NURSES_NUMBER = 6;
+const int DOCTORS_NUMBER = 3;
+const int DRUGS_NUMBER = 10;
+
 
 void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
 {
@@ -44,7 +38,7 @@ void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
 
         while(result == Action::VisitDoctor)
         {
-           // result = patient->VisitDoctor(nextDoctor);
+            result = patient->VisitDoctor(doctors[std::rand() % doctors.size()]);
         }
 
         switch(result)
@@ -75,6 +69,7 @@ void Display(std::atomic<bool>& displaying)
 {
     while(displaying)
     {
+        int end;
         clear();
         displayMutex.lock();
         mvprintw(0, 10, std::to_string(operatingRoom->GetOwnerId()).c_str());
@@ -94,10 +89,34 @@ void Display(std::atomic<bool>& displaying)
                     attroff(COLOR_PAIR(1));
                     break;
             }
-
-
-
             mvprintw(i+1,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
+            end = i + 2;
+        }
+
+        for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
+            mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
+
+            switch(patients[i]->GetState())
+            {
+                case Action::VisitDoctor :
+                    attron(COLOR_PAIR(2));
+                    mvprintw(end + i+1,15,"Visiting Doctor");
+                    attroff(COLOR_PAIR(2));
+                    break;
+                case Action::UndergoOperation :
+                    attron(COLOR_PAIR(1));
+                    mvprintw(end + i+1,15,"Getting operated");
+                    attroff(COLOR_PAIR(1));
+                    break;
+                case Action::TakeDrug :
+                    attron(COLOR_PAIR(1));
+                    mvprintw(end + i+1,15,"Taking drug");
+                    attroff(COLOR_PAIR(1));
+                    break;
+            }
+            mvprintw(end + i+1,40,std::to_string(patients[i]->GetProgress()).c_str());
+        }
+
 //
 //            mvprintw(THREAD_NUMBER+2,   0,  "Forks");
 //            mvprintw(THREAD_NUMBER+2,   15,  "Owner");
@@ -133,7 +152,6 @@ void Display(std::atomic<bool>& displaying)
 //                mvprintw(THREAD_NUMBER+3+i, 45, "no");
 //                attroff(COLOR_PAIR(1));
 //            }
-        }
         displayMutex.unlock();
         refresh();
 
@@ -157,7 +175,9 @@ int main()
 
 
 
+
     thread threadsPersonnel[THREAD_NUMBER_PERSONNEL];
+    thread threadsPatients[THREAD_NUMBER_PATIENT];
 
 
 
@@ -193,6 +213,11 @@ int main()
 //        threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
 //    }
 
+    for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
+        Patient* patient = new Patient(i+1);
+        patients.push_back(patient);
+        threadsPatients[i] = thread(PatientLifeCycle, patient, std::ref(running));
+    }
 
 
     for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
@@ -218,6 +243,11 @@ int main()
     for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
         threadsPersonnel[i].join();
     }
+
+    for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
+        threadsPatients[i].join();
+    }
+
     displayThread.join();
 
 //    for(int i = 0; i<THREAD_NUMBER; i++){

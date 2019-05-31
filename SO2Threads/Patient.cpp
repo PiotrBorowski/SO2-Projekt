@@ -18,6 +18,15 @@ void Patient::TakeDrug(Nurse *nurse, Drug *drug) {
 }
 
 void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *operatingRoom) {
+    doctor->Request(this->_id);
+    doctor->Use();
+
+//    nurse->Request(this->_id);
+//    nurse->Use();
+
+    operatingRoom->Request(this->_id);
+    operatingRoom->Use();
+
     _state = Action::UndergoOperation;
 
     _progress = 10;
@@ -25,9 +34,15 @@ void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *oper
         _progress--;
         usleep(300000 + std::rand() % 100000);
     }
+
+    doctor->Bye();
+//    nurse->Bye();
+    operatingRoom->Exit();
 }
 
 Action Patient::VisitDoctor(Doctor *doctor) {
+    doctor->Request(this->_id);
+    doctor->Use();
     _state = Action::VisitDoctor;
 
     short roll = std::rand() % 100;
@@ -38,6 +53,8 @@ Action Patient::VisitDoctor(Doctor *doctor) {
         usleep(300000 + std::rand() % 100000);
     }
 
+    doctor->Bye();
+
     if(roll < 40){
         return Action::VisitDoctor;
     }
@@ -47,4 +64,20 @@ Action Patient::VisitDoctor(Doctor *doctor) {
     else{
         return Action::UndergoOperation;
     }
+}
+
+Patient::Patient(short id) {
+    _id = id;
+}
+
+int Patient::GetId() {
+    return _id;
+}
+
+int Patient::GetProgress() {
+    return _progress;
+}
+
+Action Patient::GetState() {
+    return _state;
 }

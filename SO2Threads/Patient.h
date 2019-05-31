@@ -26,6 +26,9 @@ public:
 
     void TakeDrug(Nurse * nurse, Drug * drug);
     void UndergoOperation(Doctor * doctor, Nurse * nurse, OperatingRoom * operatingRoom);
+    int GetId();
+    int GetProgress();
+    Action GetState();
 
 private:
     short _progress;
