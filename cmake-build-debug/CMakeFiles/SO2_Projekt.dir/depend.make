@@ -7,6 +7,7 @@ CMakeFiles/SO2_Projekt.dir/SO2Threads/CleaningPersonnel.cpp.o: ../SO2Threads/Ope
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: ../SO2Threads/Doctor.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: ../SO2Threads/Doctor.h
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: ../SO2Threads/OperatingRoom.h
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/Drug.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/Drug.h
@@ -16,6 +17,7 @@ CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o: ../SO2Threads/Fork.h
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o: ../SO2Threads/Nurse.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o: ../SO2Threads/Nurse.h
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Nurse.cpp.o: ../SO2Threads/OperatingRoom.h
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o: ../SO2Threads/OperatingRoom.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/OperatingRoom.cpp.o: ../SO2Threads/OperatingRoom.h
