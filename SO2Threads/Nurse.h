@@ -10,6 +10,7 @@
 
 class Nurse {
 public:
+    Nurse();
     void Request(int id);
     void Bye();
     void Use();

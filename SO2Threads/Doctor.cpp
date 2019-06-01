@@ -34,6 +34,7 @@ void Doctor::CleanUp() {
 
 void Doctor::Bye() {
     _state = State::dirty;
+    _ownerId = -1;
     _mutex.unlock();
     UnlockConditionVariable();
 }

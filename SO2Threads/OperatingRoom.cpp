@@ -35,6 +35,7 @@ void OperatingRoom::CleanUp() {
 
 void OperatingRoom::Exit() {
     _state = State::dirty;
+    _ownerId = -1;
     _mutex.unlock();
     UnlockConditionVariable();
 }

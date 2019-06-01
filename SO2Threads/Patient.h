@@ -12,6 +12,7 @@
 #include "OperatingRoom.h"
 
 enum Action{
+    None,
     VisitDoctor,
     TakeDrug,
     UndergoOperation
@@ -29,11 +30,13 @@ public:
     int GetId();
     int GetProgress();
     Action GetState();
+    Action GetNextState();
 
 private:
     short _progress;
     short _id;
-    Action _state = Action::VisitDoctor;
+    Action _state = Action::None;
+    Action _nextState = Action::None;
 
 };
 
