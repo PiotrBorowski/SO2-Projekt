@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.h
-OperatingRoom.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
-
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.h
 OperatingRoom.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.h
+OperatingRoom.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Nurse.h
 OperatingRoom.h
@@ -22,6 +20,16 @@ OperatingRoom.h
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
 condition_variable
+-
+
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp
+Patient.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
+thread
+-
+cstdlib
+-
+unistd.h
 -
 
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
@@ -33,24 +41,4 @@ Drug.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Drug.h
 OperatingRoom.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/OperatingRoom.h
-
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/main.cpp
-iostream
--
-thread
--
-vector
--
-atomic
--
-ncurses.h
--
-mutex
--
-unistd.h
--
-Patient.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
-CleaningPersonnel.h
-/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/CleaningPersonnel.h
 

@@ -11,6 +11,7 @@ CMakeFiles/SO2_Projekt.dir/SO2Threads/Doctor.cpp.o: ../SO2Threads/OperatingRoom.
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/Drug.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/Drug.h
+CMakeFiles/SO2_Projekt.dir/SO2Threads/Drug.cpp.o: ../SO2Threads/OperatingRoom.h
 
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o: ../SO2Threads/Fork.cpp
 CMakeFiles/SO2_Projekt.dir/SO2Threads/Fork.cpp.o: ../SO2Threads/Fork.h

@@ -20,7 +20,7 @@ OperatingRoom* operatingRoom = new OperatingRoom();
 
 std::mutex displayMutex;
 
-const int THREAD_NUMBER_PERSONNEL = 3;
+const int THREAD_NUMBER_PERSONNEL = 2;
 const int THREAD_NUMBER_PATIENT = 8;
 const int NURSES_NUMBER = 4;
 const int DOCTORS_NUMBER = 7;
@@ -29,8 +29,6 @@ const int DRUGS_NUMBER = 5;
 
 void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
 {
-    //TODO: dobieranie doktorow
-
     while (running)
     {
         Doctor* doctor;
@@ -81,7 +79,7 @@ void Display(std::atomic<bool>& displaying)
         int end;
         clear();
         displayMutex.lock();
-        mvprintw(0, 0, "Sala (ownerId):");
+        mvprintw(0, 0, "Operating room:");
         mvprintw(0, 33, std::to_string(operatingRoom->GetOwnerId()).c_str());
         for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
             mvprintw(i+1,0, std::to_string(cleaningPersonnel[i]->GetId()).c_str());
@@ -103,6 +101,7 @@ void Display(std::atomic<bool>& displaying)
             end = i + 2;
         }
 
+        mvprintw(end, 0, "Patients:");
         for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
             mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
 
@@ -236,19 +235,6 @@ int main()
 
     thread threadsPersonnel[THREAD_NUMBER_PERSONNEL];
     thread threadsPatients[THREAD_NUMBER_PATIENT];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

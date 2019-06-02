@@ -58,6 +58,7 @@ Action Patient::VisitDoctor(Doctor *doctor) {
     doctor->Request(this->_id);
     doctor->Use();
     _state = Action::VisitDoctor;
+    _nextState = None;
 
     short roll = std::rand() % 100;
 
@@ -70,7 +71,7 @@ Action Patient::VisitDoctor(Doctor *doctor) {
     doctor->Bye();
     _state = Action::None;
 
-    if(roll < 40){
+    if(roll < 33){
         _nextState = Action::VisitDoctor;
         return Action::VisitDoctor;
     }
