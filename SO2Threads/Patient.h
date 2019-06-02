@@ -27,8 +27,12 @@ public:
 
     void TakeDrug(Nurse * nurse, Drug * drug);
     void UndergoOperation(Doctor * doctor, Nurse * nurse, OperatingRoom * operatingRoom);
-    int GetId();
+    short GetId();
     int GetProgress();
+    short GetDoctorId();
+    short GetNurseId();
+    void SetDoctorId(short id);
+    void SetNurseId(short id);
     Action GetState();
     Action GetNextState();
 
@@ -37,6 +41,7 @@ private:
     short _id;
     Action _state = Action::None;
     Action _nextState = Action::None;
+    short doctorId, nurseId;
 
 };
 

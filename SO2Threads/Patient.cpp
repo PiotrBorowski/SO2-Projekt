@@ -46,7 +46,7 @@ void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *oper
     }
 
     doctor->Bye();
-    //nurse->Bye();
+    nurse->Bye();
     operatingRoom->Exit();
     _state = Action::None;
 }
@@ -85,7 +85,7 @@ Patient::Patient(short id) {
     _id = id;
 }
 
-int Patient::GetId() {
+short Patient::GetId() {
     return _id;
 }
 
@@ -99,4 +99,20 @@ Action Patient::GetState() {
 
 Action Patient::GetNextState() {
     return _nextState;
+}
+
+short Patient::GetNurseId() {
+    return nurseId;
+}
+
+short Patient::GetDoctorId() {
+    return doctorId;
+}
+
+void Patient::SetNurseId(short id) {
+    nurseId = id;
+}
+
+void Patient::SetDoctorId(short id) {
+    doctorId = id;
 }
