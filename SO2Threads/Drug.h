@@ -6,8 +6,28 @@
 #define SO2_PROJEKT_DRUG_H
 
 
-class Drug {
+#include "OperatingRoom.h"
 
+class Drug {
+public:
+    Drug();
+    void Request(int id);
+    void GetBack();
+    void Use();
+    short GetOwnerId();
+private:
+    bool _isBusy;
+    short _ownerId;
+    State _state;
+
+    std::mutex _mutex;
+    std::mutex _conditionMutex;
+    std::condition_variable _condition_variable;
+
+    void SetConditionVariable();
+    void UnlockConditionVariable();
+    void Take(int ownerId);
+    void CleanUp();
 };
 
 

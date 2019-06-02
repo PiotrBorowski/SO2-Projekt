@@ -10,6 +10,8 @@
 void Patient::TakeDrug(Nurse *nurse, Drug *drug) {
     nurse->Request(this->_id);
     nurse->Use();
+    drug->Request(this->_id);
+    drug->Use();
 
     _state = Action::TakeDrug;
     _nextState = Action::VisitDoctor;
@@ -22,6 +24,7 @@ void Patient::TakeDrug(Nurse *nurse, Drug *drug) {
     }
 
     nurse->Bye();
+    drug->GetBack();
     _state = Action::None;
 }
 

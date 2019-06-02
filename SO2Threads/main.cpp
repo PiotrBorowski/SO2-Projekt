@@ -33,7 +33,7 @@ void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
 
     while (running)
     {
-        Doctor* doctor = doctors[std::rand() % doctors.size()];
+        Doctor* doctor;
 
         Action result;
 
@@ -116,7 +116,7 @@ void Display(std::atomic<bool>& displaying)
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,15,"Getting operated");
+                    mvprintw(end + i+1,15,"Being operated");
                     mvprintw(end + i + 1, 14, std::to_string(patients[i]->GetDoctorId()).c_str());
                     attroff(COLOR_PAIR(4));
                     break;
@@ -141,7 +141,7 @@ void Display(std::atomic<bool>& displaying)
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,40,"Getting operated");
+                    mvprintw(end + i+1,40,"Being operated");
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
