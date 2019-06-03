@@ -79,29 +79,33 @@ void Display(std::atomic<bool>& displaying)
         int end;
         clear();
         displayMutex.lock();
-        mvprintw(0, 0, "Operating room:");
-        mvprintw(0, 33, std::to_string(operatingRoom->GetOwnerId()).c_str());
+
+        mvprintw(1, 0, "Cleaning personnel:");
+
         for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
-            mvprintw(i+1,0, std::to_string(cleaningPersonnel[i]->GetId()).c_str());
+            mvprintw(i+2,0, std::to_string(cleaningPersonnel[i]->GetId()).c_str());
 
             switch(cleaningPersonnel[i]->GetState())
             {
                 case PersonelState::cleaningOR :
                     attron(COLOR_PAIR(2));
-                    mvprintw(i+1,15,"cleaning OPERATING ROOM");
+                    mvprintw(i+2,15,"cleaning OPERATING ROOM");
                     attroff(COLOR_PAIR(2));
                     break;
                 case PersonelState::cleaningCorridor:
                     attron(COLOR_PAIR(1));
-                    mvprintw(i+1,15,"cleaning Corridor");
+                    mvprintw(i+2,15,"cleaning Corridor");
                     attroff(COLOR_PAIR(1));
                     break;
             }
-            mvprintw(i+1,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
-            end = i + 2;
+            mvprintw(i+2,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
+            end = i + 4;
         }
 
         mvprintw(end, 0, "Patients:");
+        mvprintw(end, 15, "Now:");
+        mvprintw(end, 40, "Waiting for:");
+
         for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
             mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
 
@@ -163,27 +167,54 @@ void Display(std::atomic<bool>& displaying)
         }
         end = THREAD_NUMBER_PATIENT + THREAD_NUMBER_PATIENT + 1;
 
+
+        mvprintw(end-2, 0, "Operating room:");
+        mvprintw(end-2, 17, std::to_string(operatingRoom->GetOwnerId()).c_str());
+
         mvprintw(end ,0, "Doctors (ownerId)");
 
         for(int i = 0; i<DOCTORS_NUMBER; i++){
-            mvprintw(end+ 1 + i,0, std::to_string(doctors[i]->GetOwnerId()).c_str());
+            int id = doctors[i]->GetOwnerId();
+            mvprintw(end + 1 + i,0, std::to_string(i).c_str());
+            if(id == -1)
+            {
+                mvprintw(end+ 1 + i,10, "FREE");
+            }
+            else
+            {
+                mvprintw(end+ 1 + i,10, std::to_string(id).c_str());
+            }
 
         }
 
-        end += DOCTORS_NUMBER + 1;
-
-        mvprintw(end ,0, "Nurses (ownerId)");
+        mvprintw(end ,20, "Nurses (ownerId)");
 
         for(int i = 0; i<NURSES_NUMBER; i++){
-            mvprintw(end + 1 + i,0, std::to_string(nurses[i]->GetOwnerId()).c_str());
+            int id = nurses[i]->GetOwnerId();
+            mvprintw(end + 1 + i,20, std::to_string(i).c_str());
+            if(id == -1)
+            {
+                mvprintw(end+ 1 + i,30, "FREE");
+            }
+            else
+            {
+                mvprintw(end+ 1 + i,30, std::to_string(id).c_str());
+            }
         }
 
-        end += NURSES_NUMBER + 1;
-
-        mvprintw(end ,0, "Drugs (ownerId)");
+        mvprintw(end ,40, "Drugs (ownerId)");
 
         for(int i = 0; i<DRUGS_NUMBER; i++){
-            mvprintw(end + 1 + i,0, std::to_string(drugs[i]->GetOwnerId()).c_str());
+            int id = drugs[i]->GetOwnerId();
+            mvprintw(end + 1 + i,40, std::to_string(i).c_str());
+            if(id == -1)
+            {
+                mvprintw(end+ 1 + i,50, "FREE");
+            }
+            else
+            {
+                mvprintw(end+ 1 + i,50, std::to_string(id).c_str());
+            }
         }
 
         displayMutex.unlock();
@@ -192,7 +223,6 @@ void Display(std::atomic<bool>& displaying)
         usleep(10000);
     }
 }
-
 
 int main()
 {
@@ -243,14 +273,14 @@ int main()
     }
 
     for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
-        Patient* patient = new Patient(i+1);
+        Patient* patient = new Patient(i);
         patients.push_back(patient);
         threadsPatients[i] = thread(PatientLifeCycle, patient, std::ref(running));
     }
 
 
     for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
-        CleaningPersonnel* personnel = new CleaningPersonnel(100 + i+1);
+        CleaningPersonnel* personnel = new CleaningPersonnel(100 + i);
         cleaningPersonnel.push_back(personnel);
         threadsPersonnel[i] = thread(CleaningPersonnelLifeCycle, personnel, operatingRoom, std::ref(running));
     }
