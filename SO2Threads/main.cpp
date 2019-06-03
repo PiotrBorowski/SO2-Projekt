@@ -105,18 +105,22 @@ void Display(std::atomic<bool>& displaying)
         for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
             mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
 
+            std::string doctorString = "Visiting Doctor";
+            std::string operatedString = "Being operated";
+
             switch(patients[i]->GetState())
             {
                 case Action::VisitDoctor :
                     attron(COLOR_PAIR(2));
-                    mvprintw(end + i+1,15,"Visiting Doctor");
-                    mvprintw(end + i + 1, 14, std::to_string(patients[i]->GetDoctorId()).c_str());
+
+                    mvprintw(end + i+1,15,  doctorString.append(std::to_string(patients[i]->GetDoctorId())).c_str());
+
                     attroff(COLOR_PAIR(2));
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,15,"Being operated");
-                    mvprintw(end + i + 1, 14, std::to_string(patients[i]->GetDoctorId()).c_str());
+                    mvprintw(end + i+1,15, operatedString.append(std::to_string(patients[i]->GetDoctorId())).c_str());
+
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
@@ -174,41 +178,14 @@ void Display(std::atomic<bool>& displaying)
             mvprintw(end + 1 + i,0, std::to_string(nurses[i]->GetOwnerId()).c_str());
         }
 
-//
-//            mvprintw(THREAD_NUMBER+2,   0,  "Forks");
-//            mvprintw(THREAD_NUMBER+2,   15,  "Owner");
-//            mvprintw(THREAD_NUMBER+2,   30,  "State");
-//            mvprintw(THREAD_NUMBER+2,   45,  "is taken?");
-//            mvprintw(THREAD_NUMBER+3+i, 0,  std::to_string(i).c_str());
-//            mvprintw(THREAD_NUMBER+3+i, 15, std::to_string(forks[i]->GetOwnerId()).c_str());
-//
-//            switch(forks[i]->GetState())
-//            {
-//                case ForkState::dirty:
-//                    attron(COLOR_PAIR(3));
-//                    mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetStateString().c_str());
-//                    attron(COLOR_PAIR(3));
-//                    break;
-//                case ForkState::clean:
-//                    attron(COLOR_PAIR(4));
-//                    mvprintw(THREAD_NUMBER+3+i, 30, forks[i]->GetStateString().c_str());
-//                    attron(COLOR_PAIR(4));
-//                    break;
-//                default:
-//                    break;
-//            }
-//
-//            if(forks[i]->GetIsTaken())
-//            {
-//                attron(COLOR_PAIR(2));
-//                mvprintw(THREAD_NUMBER+3+i, 45, "yes");
-//                attroff(COLOR_PAIR(2));
-//            }
-//            else{
-//                attron(COLOR_PAIR(1));
-//                mvprintw(THREAD_NUMBER+3+i, 45, "no");
-//                attroff(COLOR_PAIR(1));
-//            }
+        end += NURSES_NUMBER + 1;
+
+        mvprintw(end ,0, "Drugs (ownerId)");
+
+        for(int i = 0; i<DRUGS_NUMBER; i++){
+            mvprintw(end + 1 + i,0, std::to_string(drugs[i]->GetOwnerId()).c_str());
+        }
+
         displayMutex.unlock();
         refresh();
 
@@ -252,10 +229,6 @@ int main()
 
 
     std::atomic<bool> running{true};
-
-//    for(int i = 0; i<THREAD_NUMBER; i++){
-//        threads[i] = thread(PhilosopherLifeCycle, philosophers[i], std::ref(running));
-//    }
 
     for(int i = 0; i<DOCTORS_NUMBER; i++){
         doctors.push_back(new Doctor());
@@ -306,9 +279,13 @@ int main()
 
     displayThread.join();
 
-//    for(int i = 0; i<THREAD_NUMBER; i++){
-//        delete philosophers[i];
-//    }
+    for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
+        delete patients[i];
+    }
+
+    for(int i = 0; i<THREAD_NUMBER_PERSONNEL; i++){
+        delete cleaningPersonnel[i];
+    }
 
     endwin();
 
