@@ -21,10 +21,10 @@ OperatingRoom* operatingRoom = new OperatingRoom();
 std::mutex displayMutex;
 
 const int THREAD_NUMBER_PERSONNEL = 2;
-const int THREAD_NUMBER_PATIENT = 8;
+const int THREAD_NUMBER_PATIENT = 11;
 const int NURSES_NUMBER = 4;
 const int DOCTORS_NUMBER = 7;
-const int DRUGS_NUMBER = 5;
+const int DRUGS_NUMBER = 3;
 
 
 void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
@@ -104,13 +104,14 @@ void Display(std::atomic<bool>& displaying)
 
         mvprintw(end, 0, "Patients:");
         mvprintw(end, 15, "Now:");
-        mvprintw(end, 40, "Waiting for:");
+        mvprintw(end, 45, "Waiting for:");
 
         for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
             mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
 
-            std::string doctorString = "Visiting Doctor";
-            std::string operatedString = "Being operated";
+            std::string doctorString =      "Visiting Doctor";
+            std::string operatedString =    "Operation Doctor";
+            std::string drugString =        "Taking Drug Nurse";
 
             switch(patients[i]->GetState())
             {
@@ -123,13 +124,13 @@ void Display(std::atomic<bool>& displaying)
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,15, operatedString.append(std::to_string(patients[i]->GetDoctorId())).c_str());
+                    mvprintw(end + i+1,15, operatedString.append(std::to_string(patients[i]->GetDoctorId())).append(" Nurse").append(std::to_string(patients[i]->GetNurseId())).c_str());
 
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
                     attron(COLOR_PAIR(3));
-                    mvprintw(end + i+1,15,"Taking drug");
+                    mvprintw(end + i+1,15, drugString.append(std::to_string(patients[i]->GetNurseId())).c_str());
                     attroff(COLOR_PAIR(3));
                     break;
                 case Action::None:
@@ -143,27 +144,27 @@ void Display(std::atomic<bool>& displaying)
             {
                 case Action::VisitDoctor :
                     attron(COLOR_PAIR(2));
-                    mvprintw(end + i+1,40,"Visiting Doctor");
+                    mvprintw(end + i+1,45,"Visiting Doctor");
                     attroff(COLOR_PAIR(2));
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,40,"Being operated");
+                    mvprintw(end + i+1,45,"Being operated");
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
                     attron(COLOR_PAIR(3));
-                    mvprintw(end + i+1,40,"Taking drug");
+                    mvprintw(end + i+1,45,"Taking drug");
                     attroff(COLOR_PAIR(3));
                     break;
                 case Action::None:
                     attron(COLOR_PAIR(1));
-                    mvprintw(end + i+1,40,"Nothing");
+                    mvprintw(end + i+1,45,"Nothing");
                     attroff(COLOR_PAIR(1));
                     break;
             }
 
-            mvprintw(end + i+1,33,std::to_string(patients[i]->GetProgress()).c_str());
+            mvprintw(end + i+1,40,std::to_string(patients[i]->GetProgress()).c_str());
         }
         end = THREAD_NUMBER_PATIENT + THREAD_NUMBER_PATIENT + 1;
 
@@ -178,7 +179,9 @@ void Display(std::atomic<bool>& displaying)
             mvprintw(end + 1 + i,0, std::to_string(i).c_str());
             if(id == -1)
             {
+                attron(COLOR_PAIR(1));
                 mvprintw(end+ 1 + i,10, "FREE");
+                attroff(COLOR_PAIR(1));
             }
             else
             {
@@ -194,7 +197,9 @@ void Display(std::atomic<bool>& displaying)
             mvprintw(end + 1 + i,20, std::to_string(i).c_str());
             if(id == -1)
             {
+                attron(COLOR_PAIR(1));
                 mvprintw(end+ 1 + i,30, "FREE");
+                attroff(COLOR_PAIR(1));
             }
             else
             {
@@ -209,7 +214,9 @@ void Display(std::atomic<bool>& displaying)
             mvprintw(end + 1 + i,40, std::to_string(i).c_str());
             if(id == -1)
             {
+                attron(COLOR_PAIR(1));
                 mvprintw(end+ 1 + i,50, "FREE");
+                attroff(COLOR_PAIR(1));
             }
             else
             {

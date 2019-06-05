@@ -26,7 +26,7 @@ void OperatingRoom::SetConditionVariable() {
 
 void OperatingRoom::UnlockConditionVariable() {
     std::unique_lock<std::mutex> lock(_conditionMutex);
-    _condition_variable.notify_all();
+    _condition_variable.notify_one();
 }
 
 void OperatingRoom::CleanUp() {

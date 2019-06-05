@@ -25,7 +25,7 @@ void Doctor::SetConditionVariable() {
 
 void Doctor::UnlockConditionVariable() {
     std::unique_lock<std::mutex> lock(_conditionMutex);
-    _condition_variable.notify_all();
+    _condition_variable.notify_one();
 }
 
 void Doctor::CleanUp() {

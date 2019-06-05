@@ -16,7 +16,6 @@ public:
     void Use();
     short GetOwnerId();
 private:
-    bool _isBusy;
     short _ownerId;
     State _state;
 
