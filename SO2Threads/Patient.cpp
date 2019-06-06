@@ -14,7 +14,7 @@ void Patient::TakeDrug(Nurse *nurse, Drug *drug) {
     drug->Use();
 
     _state = Action::TakeDrug;
-    _nextState = Action::VisitDoctor;
+    _nextState = Action::Home;
 
 
     _progress = 10;
@@ -45,7 +45,7 @@ void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *oper
     _progress = 10;
     for (int i = 0; i < 10; ++i) {
         _progress--;
-        usleep(500000 + std::rand() % 100000);
+        usleep(800000 + std::rand() % 200000);
     }
 
     doctor->Bye();
@@ -65,24 +65,43 @@ Action Patient::VisitDoctor(Doctor *doctor) {
     _progress = 10;
     for (int i = 0; i < 10; ++i) {
         _progress--;
-        usleep(300000 + std::rand() % 100000);
+        usleep(300000 + std::rand() % 200000);
     }
 
     doctor->Bye();
     _state = Action::None;
 
-    if(roll < 33){
+    if (roll < 15){
+        _nextState = Action::Home;
+        return _nextState;
+    }
+    else if(roll < 40){
         _nextState = Action::VisitDoctor;
-        return Action::VisitDoctor;
+        return _nextState;
     }
     else if (roll < 80){
         _nextState = Action::TakeDrug;
-        return Action::TakeDrug;
+        return _nextState;
     }
     else{
         _nextState = Action::UndergoOperation;
-        return Action::UndergoOperation;
+        return _nextState;
     }
+}
+
+
+void Patient::GoHome() {
+  _state = Home;
+  _nextState = Action::VisitDoctor;
+
+    _progress = 10;
+    for (int i = 0; i < 10; ++i) {
+        _progress--;
+        usleep(300000 + std::rand() % 200000);
+    }
+
+    _state = None;
+    _nextState = Action::VisitDoctor;
 }
 
 Patient::Patient(short id) {
@@ -120,3 +139,12 @@ void Patient::SetNurseId(short id) {
 void Patient::SetDoctorId(short id) {
     doctorId = id;
 }
+
+short Patient::GetDrugId() {
+    return drugId;
+}
+
+void Patient::SetDrugId(short id) {
+    drugId = id;
+}
+

@@ -53,4 +53,5 @@ short Doctor::GetOwnerId() {
 
 Doctor::Doctor() {
     _state = State::dirty;
+    _ownerId = -1;
 }

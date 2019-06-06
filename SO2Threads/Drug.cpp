@@ -53,4 +53,5 @@ short Drug::GetOwnerId() {
 
 Drug::Drug(){
     _state = State::dirty;
+    _ownerId = -1;
 }

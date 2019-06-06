@@ -52,4 +52,5 @@ short Nurse::GetOwnerId() {
 
 Nurse::Nurse(){
     _state = State::dirty;
+    _ownerId = -1;
 }

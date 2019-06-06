@@ -54,4 +54,5 @@ short OperatingRoom::GetOwnerId() {
 
 OperatingRoom::OperatingRoom() {
     _state = State::dirty;
+    _ownerId = -1;
 }

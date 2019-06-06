@@ -43,14 +43,19 @@ void PatientLifeCycle(Patient* patient, std::atomic<bool>& running)
         } while(result == Action::VisitDoctor);
 
 
-int nurseId;
+        short nurseId, drugId;
+
         switch(result)
         {
             case Action::TakeDrug:
                 //podanie leku u pielegniarki
                 nurseId = std::rand() % nurses.size();
                 patient->SetNurseId(nurseId);
-                patient->TakeDrug(nurses[nurseId], drugs[std::rand() % drugs.size()]);
+                drugId = std::rand() % drugs.size();
+                patient->SetDrugId(drugId);
+                patient->TakeDrug(nurses[nurseId], drugs[drugId]);
+
+                patient->GoHome();
                 break;
 
             case Action::UndergoOperation:
@@ -59,8 +64,21 @@ int nurseId;
                 patient->SetNurseId(nurseId);
                 patient->UndergoOperation(doctor, nurses[nurseId], operatingRoom);
                 break;
+
+            case Action::Home:
+                patient->GoHome();
+            break;
         }
     }
+}
+
+void progressBar(int progress, int line, int column)
+{
+    for(int i = 0; i < progress; i++)
+    {
+        mvaddch(line, column + i, '#');
+    }
+
 }
 
 void CleaningPersonnelLifeCycle(CleaningPersonnel* cleaningPersonnel, OperatingRoom* operatingRoom, std::atomic<bool>& running)
@@ -98,20 +116,21 @@ void Display(std::atomic<bool>& displaying)
                     attroff(COLOR_PAIR(1));
                     break;
             }
-            mvprintw(i+2,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
+            //mvprintw(i+2,40,std::to_string(cleaningPersonnel[i]->GetProgress()).c_str());
+            progressBar(cleaningPersonnel[i]->GetProgress(), i+2, 40);
             end = i + 4;
         }
 
         mvprintw(end, 0, "Patients:");
         mvprintw(end, 15, "Now:");
-        mvprintw(end, 45, "Waiting for:");
+        mvprintw(end, 55, "Waiting for:");
 
         for(int i = 0; i<THREAD_NUMBER_PATIENT; i++){
             mvprintw(end + i+1,0, std::to_string(patients[i]->GetId()).c_str());
 
             std::string doctorString =      "Visiting Doctor";
             std::string operatedString =    "Operation Doctor";
-            std::string drugString =        "Taking Drug Nurse";
+            std::string drugString =        "Taking Drug";
 
             switch(patients[i]->GetState())
             {
@@ -119,24 +138,30 @@ void Display(std::atomic<bool>& displaying)
                     attron(COLOR_PAIR(2));
 
                     mvprintw(end + i+1,15,  doctorString.append(std::to_string(patients[i]->GetDoctorId())).c_str());
-
+                    progressBar(patients[i]->GetProgress(), end+i+1, 40);
                     attroff(COLOR_PAIR(2));
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
                     mvprintw(end + i+1,15, operatedString.append(std::to_string(patients[i]->GetDoctorId())).append(" Nurse").append(std::to_string(patients[i]->GetNurseId())).c_str());
-
+                    progressBar(patients[i]->GetProgress(), end+i+1, 40);
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
                     attron(COLOR_PAIR(3));
-                    mvprintw(end + i+1,15, drugString.append(std::to_string(patients[i]->GetNurseId())).c_str());
+                    mvprintw(end + i+1,15, drugString.append(std::to_string(patients[i]->GetDrugId())).append(" Nurse").append(std::to_string(patients[i]->GetNurseId())).c_str());
+                    progressBar(patients[i]->GetProgress(), end+i+1, 40);
                     attroff(COLOR_PAIR(3));
                     break;
                 case Action::None:
                     attron(COLOR_PAIR(1));
                     mvprintw(end + i+1,15,"Nothing");
+                    progressBar(patients[i]->GetProgress(), end+i+1, 40);
                     attroff(COLOR_PAIR(1));
+                    break;
+                case Action::Home:
+                    mvprintw(end + i+1,15,"Home");
+                    progressBar(patients[i]->GetProgress(), end+i+1, 40);
                     break;
             }
 
@@ -144,27 +169,30 @@ void Display(std::atomic<bool>& displaying)
             {
                 case Action::VisitDoctor :
                     attron(COLOR_PAIR(2));
-                    mvprintw(end + i+1,45,"Visiting Doctor");
+                    mvprintw(end + i+1,55,"Visiting Doctor");
                     attroff(COLOR_PAIR(2));
                     break;
                 case Action::UndergoOperation :
                     attron(COLOR_PAIR(4));
-                    mvprintw(end + i+1,45,"Being operated");
+                    mvprintw(end + i+1,55,"Being operated");
                     attroff(COLOR_PAIR(4));
                     break;
                 case Action::TakeDrug :
                     attron(COLOR_PAIR(3));
-                    mvprintw(end + i+1,45,"Taking drug");
+                    mvprintw(end + i+1,55,"Taking drug");
                     attroff(COLOR_PAIR(3));
                     break;
                 case Action::None:
                     attron(COLOR_PAIR(1));
-                    mvprintw(end + i+1,45,"Nothing");
+                    mvprintw(end + i+1,55,"Nothing");
                     attroff(COLOR_PAIR(1));
+                    break;
+                case Action::Home:
+                    mvprintw(end + i+1,55,"Home");
                     break;
             }
 
-            mvprintw(end + i+1,40,std::to_string(patients[i]->GetProgress()).c_str());
+
         }
         end = THREAD_NUMBER_PATIENT + THREAD_NUMBER_PATIENT + 1;
 
@@ -230,6 +258,7 @@ void Display(std::atomic<bool>& displaying)
         usleep(10000);
     }
 }
+
 
 int main()
 {

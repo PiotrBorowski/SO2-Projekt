@@ -16,7 +16,7 @@ void CleaningPersonnel::CleanOperatingRoom(OperatingRoom *operatingRoom) {
     _progress = 10;
     for (int i = 0; i < 10; ++i) {
         _progress--;
-        usleep(300000 + std::rand() % 100000);
+        usleep(500000 + std::rand() % 100000);
     }
     operatingRoom->Exit();
 }

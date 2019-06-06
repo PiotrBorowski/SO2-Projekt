@@ -26,6 +26,16 @@ OperatingRoom.h
 condition_variable
 -
 
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.cpp
+Patient.h
+/home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
+thread
+-
+cstdlib
+-
+unistd.h
+-
+
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Patient.h
 Doctor.h
 /home/borowski/Documents/SO/SO2Projekt/SO2-Projekt/SO2Threads/Doctor.h
