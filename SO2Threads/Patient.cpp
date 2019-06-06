@@ -28,9 +28,12 @@ void Patient::TakeDrug(Nurse *nurse, Drug *drug) {
     _state = Action::None;
 }
 
-void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *operatingRoom) {
+void Patient::UndergoOperation(Doctor *doctor, Doctor* secondDoctor, Nurse *nurse, OperatingRoom *operatingRoom) {
     doctor->Request(this->_id);
     doctor->Use();
+
+    secondDoctor->Request(this->_id);
+    secondDoctor->Use();
 
     nurse->Request(this->_id);
     nurse->Use();
@@ -45,10 +48,11 @@ void Patient::UndergoOperation(Doctor *doctor, Nurse *nurse, OperatingRoom *oper
     _progress = 10;
     for (int i = 0; i < 10; ++i) {
         _progress--;
-        usleep(800000 + std::rand() % 200000);
+        usleep(600000 + std::rand() % 200000);
     }
 
     doctor->Bye();
+    secondDoctor->Bye();
     nurse->Bye();
     operatingRoom->Exit();
     _state = Action::None;
@@ -146,5 +150,13 @@ short Patient::GetDrugId() {
 
 void Patient::SetDrugId(short id) {
     drugId = id;
+}
+
+short Patient::GetSecondDoctorId() {
+    return secondDoctorId;
+}
+
+void Patient::SetSecondDoctorId(short id) {
+    secondDoctorId = id;
 }
 

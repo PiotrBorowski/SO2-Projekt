@@ -27,7 +27,7 @@ public:
     Action VisitDoctor(Doctor* doctor);
 
     void TakeDrug(Nurse * nurse, Drug * drug);
-    void UndergoOperation(Doctor * doctor, Nurse * nurse, OperatingRoom * operatingRoom);
+    void UndergoOperation(Doctor * doctor, Doctor* secondDoctor, Nurse * nurse, OperatingRoom * operatingRoom);
     void GoHome();
 
     short GetId();
@@ -35,9 +35,11 @@ public:
     short GetDoctorId();
     short GetNurseId();
     short GetDrugId();
+    short GetSecondDoctorId();
     void SetDoctorId(short id);
     void SetNurseId(short id);
     void SetDrugId(short id);
+    void SetSecondDoctorId(short id);
     Action GetState();
     Action GetNextState();
 
@@ -46,7 +48,7 @@ private:
     short _id;
     Action _state = Action::None;
     Action _nextState = Action::VisitDoctor;
-    short doctorId, nurseId, drugId;
+    short doctorId, secondDoctorId, nurseId, drugId;
 
 };
 
